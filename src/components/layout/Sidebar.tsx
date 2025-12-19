@@ -22,7 +22,7 @@ export function Sidebar({ sections, activeSection, onSectionClick, isOpen, onClo
       {/* Overlay for mobile */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-foreground/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
@@ -30,24 +30,24 @@ export function Sidebar({ sections, activeSection, onSectionClick, isOpen, onClo
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed lg:sticky top-16 left-0 h-[calc(100vh-4rem)] w-72 bg-sidebar z-40 transition-transform duration-300 overflow-y-auto no-print",
-          isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+          "fixed lg:sticky top-[7.5rem] lg:top-[7.5rem] left-0 h-[calc(100vh-7.5rem)] w-72 bg-card border-r border-border transition-transform duration-300 overflow-y-auto no-print shadow-sm",
+          isOpen ? "translate-x-0 z-50 top-0 h-screen" : "-translate-x-full lg:translate-x-0 z-30"
         )}
       >
         <div className="p-4">
           <div className="flex items-center justify-between mb-4 lg:hidden">
-            <h2 className="text-lg font-semibold text-sidebar-foreground">Navegação</h2>
+            <h2 className="text-lg font-semibold text-foreground">Navegação</h2>
             <Button
               variant="ghost"
               size="icon"
               onClick={onClose}
-              className="text-sidebar-foreground hover:bg-sidebar-accent"
+              className="text-foreground hover:bg-muted"
             >
               <X className="h-5 w-5" />
             </Button>
           </div>
 
-          <h2 className="hidden lg:block text-sm font-semibold text-sidebar-foreground/70 uppercase tracking-wider mb-4">
+          <h2 className="hidden lg:block text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
             Sumário
           </h2>
 
