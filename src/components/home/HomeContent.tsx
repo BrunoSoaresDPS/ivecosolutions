@@ -1,6 +1,5 @@
 import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background.jpg";
 
 interface HomeContentProps {
   onNavigate: (tab: "material1" | "material2") => void;
@@ -9,11 +8,19 @@ interface HomeContentProps {
 export function HomeContent({ onNavigate }: HomeContentProps) {
   return (
     <div className="min-h-[calc(100vh-12rem)] flex flex-col">
-      {/* Hero Section with Background Image */}
-      <div 
-        className="relative text-white py-12 sm:py-16 md:py-24 px-4 md:px-8 bg-contain bg-center bg-no-repeat bg-primary"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      >
+      {/* Hero Section with Video Background */}
+      <div className="relative text-white py-12 sm:py-16 md:py-24 px-4 md:px-8 overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
+        </video>
+        
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50" />
         
