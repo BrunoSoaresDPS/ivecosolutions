@@ -74,10 +74,10 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
 
           {/* Cobertura de Planos Card */}
           <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="bg-accent/30 p-6 border-b border-border">
+            <div className="bg-primary/10 p-6 border-b border-border">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-3 bg-accent rounded-lg">
-                  <Shield className="h-6 w-6 text-accent-foreground" />
+                <div className="p-3 bg-primary rounded-lg">
+                  <Shield className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <h2 className="text-2xl font-bold text-foreground">Cobertura de Planos</h2>
               </div>
@@ -91,19 +91,19 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-3">
-                  <FileCheck className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <FileCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong className="text-foreground">5 opções de planos</strong> - Do Básico ao Completo
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong className="text-foreground">Cobertura abrangente</strong> - Motor, câmbio, eixos e mais
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Truck className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <Truck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">
                     <strong className="text-foreground">Telemetria incluída</strong> - IVECO ON e NEXPRO CONNECT
                   </span>
@@ -112,8 +112,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
 
               <Button 
                 onClick={() => onNavigate("material2")}
-                variant="outline"
-                className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 Ver detalhes completos
                 <ArrowRight className="ml-2 h-4 w-4" />
