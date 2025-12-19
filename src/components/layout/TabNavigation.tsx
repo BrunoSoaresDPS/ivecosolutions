@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 
 interface TabNavigationProps {
-  activeTab: "material1" | "material2";
-  onTabChange: (tab: "material1" | "material2") => void;
+  activeTab: "home" | "material1" | "material2";
+  onTabChange: (tab: "home" | "material1" | "material2") => void;
 }
 
 export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
