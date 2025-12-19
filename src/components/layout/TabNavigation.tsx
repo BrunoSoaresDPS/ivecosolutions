@@ -18,7 +18,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
           )}
         >
-          <span className="hidden sm:inline">Material 1 – </span>IVECO SEU
+          IVECO SEU
         </button>
         <button
           onClick={() => onTabChange("material2")}
@@ -29,7 +29,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
           )}
         >
-          <span className="hidden sm:inline">Material 2 – </span>Cobertura de Planos
+          Cobertura de Planos
         </button>
       </div>
     </div>
