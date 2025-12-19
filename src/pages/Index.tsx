@@ -48,9 +48,7 @@ const Index = () => {
       />
       
       <div className="pt-16 flex-1 flex flex-col">
-        {activeTab !== "home" && (
-          <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
-        )}
+        <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
         
         {activeTab === "home" ? (
           <HomeContent onNavigate={setActiveTab} />
