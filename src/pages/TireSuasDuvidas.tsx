@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Footer } from "@/components/layout/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,9 +41,9 @@ export default function TireSuasDuvidas() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="h-screen flex flex-col bg-background overflow-hidden">
       {/* Simple Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white shadow-lg">
+      <header className="flex-shrink-0 bg-black text-white shadow-lg z-50">
         <div className="flex items-center justify-between h-14 sm:h-16 px-2 sm:px-4 lg:px-6">
           <div className="flex items-center gap-2 sm:gap-4">
             <Link to="/">
@@ -59,30 +58,18 @@ export default function TireSuasDuvidas() {
             <Link to="/" className="hover:opacity-80 transition-opacity">
               <img src={ivecoLogo} alt="IVECO" className="h-4 sm:h-5 w-auto brightness-0 invert" />
             </Link>
+            <span className="hidden sm:block text-white/70 text-sm">Tire suas Dúvidas</span>
           </div>
           <ThemeToggle />
         </div>
       </header>
       
-      <main className="flex-1 container mx-auto px-4 py-8 mt-20">
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-          Tire suas Dúvidas
-        </h1>
-        
-        <div className="max-w-4xl mx-auto">
-          <p className="text-muted-foreground text-center mb-8">
-            Converse com nosso assistente virtual para esclarecer suas dúvidas sobre produtos e serviços IVECO.
-          </p>
-          
-          <div 
-            id="chtl-inline-bot" 
-            style={{ width: "100%", height: "500px" }}
-            className="rounded-lg border border-border overflow-hidden"
-          />
-        </div>
-      </main>
-      
-      <Footer />
+      {/* Full height chatbot */}
+      <div 
+        id="chtl-inline-bot" 
+        className="flex-1 w-full"
+        style={{ minHeight: 0 }}
+      />
     </div>
   );
 }
