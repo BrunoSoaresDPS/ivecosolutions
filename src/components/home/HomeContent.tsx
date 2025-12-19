@@ -11,7 +11,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
     <div className="min-h-[calc(100vh-12rem)] flex flex-col">
       {/* Hero Section with Background Image */}
       <div 
-        className="relative text-white py-12 sm:py-16 md:py-24 px-4 md:px-8 bg-cover bg-center bg-no-repeat"
+        className="relative text-white py-12 sm:py-16 md:py-24 px-4 md:px-8 bg-contain bg-center bg-no-repeat bg-primary"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
         {/* Dark overlay for better text readability */}
