@@ -47,7 +47,7 @@ const Index = () => {
         onLogoClick={() => setActiveTab("home")}
       />
       
-      <div className="pt-16 flex-1 flex flex-col">
+      <div className="pt-14 sm:pt-16 flex-1 flex flex-col">
         <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
         
         {activeTab === "home" ? (
