@@ -8,10 +8,11 @@ interface HeaderProps {
   onSearch: (query: string) => void;
   searchQuery: string;
   onMenuToggle: () => void;
-  activeTab: string;
+  activeTab: "home" | "material1" | "material2";
+  onLogoClick?: () => void;
 }
 
-export function Header({ onSearch, searchQuery, onMenuToggle, activeTab }: HeaderProps) {
+export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoClick }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const handlePrint = () => {
@@ -22,23 +23,38 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab }: Heade
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const getSubtitle = () => {
+    switch (activeTab) {
+      case "material1":
+        return "IVECO SEU - Software de Eficiência Único";
+      case "material2":
+        return "Cobertura de Planos de Serviços";
+      default:
+        return "Soluções e Serviços";
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white shadow-lg no-print">
       <div className="flex items-center justify-between h-16 px-4 lg:px-6">
         <div className="flex items-center gap-4">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onMenuToggle}
-            className="lg:hidden text-white hover:bg-white/10"
-          >
-            <Menu className="h-5 w-5" />
-          </Button>
+          {activeTab !== "home" && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={onMenuToggle}
+              className="lg:hidden text-white hover:bg-white/10"
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
+          )}
           <div className="flex items-center gap-4">
-            <img src={ivecoLogo} alt="IVECO" className="h-8 w-auto" />
+            <button onClick={onLogoClick} className="hover:opacity-80 transition-opacity">
+              <img src={ivecoLogo} alt="IVECO" className="h-8 w-auto" />
+            </button>
             <div className="hidden sm:block">
               <p className="text-sm text-white/70">
-                {activeTab === "material1" ? "IVECO SEU - Software de Eficiência Único" : "Cobertura de Planos de Serviços"}
+                {getSubtitle()}
               </p>
             </div>
           </div>

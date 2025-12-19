@@ -5,9 +5,10 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { TabNavigation } from "@/components/layout/TabNavigation";
 import { Material1Content, material1Sections } from "@/components/materials/Material1Content";
 import { Material2Content, material2Sections } from "@/components/materials/Material2Content";
+import { HomeContent } from "@/components/home/HomeContent";
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState<"material1" | "material2">("material1");
+  const [activeTab, setActiveTab] = useState<"home" | "material1" | "material2">("home");
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
@@ -15,7 +16,11 @@ const Index = () => {
   // Reset search and section when tab changes
   useEffect(() => {
     setSearchQuery("");
-    setActiveSection(activeTab === "material1" ? "intro" : "intro2");
+    if (activeTab === "material1") {
+      setActiveSection("intro");
+    } else if (activeTab === "material2") {
+      setActiveSection("intro2");
+    }
   }, [activeTab]);
 
   const handleSectionClick = (sectionId: string) => {
@@ -39,36 +44,43 @@ const Index = () => {
         searchQuery={searchQuery}
         onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
         activeTab={activeTab}
+        onLogoClick={() => setActiveTab("home")}
       />
       
       <div className="pt-16 flex-1 flex flex-col">
-        <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+        {activeTab !== "home" && (
+          <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+        )}
         
-        <div className="flex flex-1">
-          <Sidebar
-            sections={currentSections}
-            activeSection={activeSection}
-            onSectionClick={handleSectionClick}
-            isOpen={sidebarOpen}
-            onClose={() => setSidebarOpen(false)}
-          />
-          
-          <main className="flex-1 lg:ml-0 min-h-[calc(100vh-8rem)]">
-            <div className="p-4 md:p-8">
-              {activeTab === "material1" ? (
-                <Material1Content 
-                  searchQuery={searchQuery}
-                  onSectionVisible={setActiveSection}
-                />
-              ) : (
-                <Material2Content 
-                  searchQuery={searchQuery}
-                  onSectionVisible={setActiveSection}
-                />
-              )}
-            </div>
-          </main>
-        </div>
+        {activeTab === "home" ? (
+          <HomeContent onNavigate={setActiveTab} />
+        ) : (
+          <div className="flex flex-1">
+            <Sidebar
+              sections={currentSections}
+              activeSection={activeSection}
+              onSectionClick={handleSectionClick}
+              isOpen={sidebarOpen}
+              onClose={() => setSidebarOpen(false)}
+            />
+            
+            <main className="flex-1 lg:ml-0 min-h-[calc(100vh-8rem)]">
+              <div className="p-4 md:p-8">
+                {activeTab === "material1" ? (
+                  <Material1Content 
+                    searchQuery={searchQuery}
+                    onSectionVisible={setActiveSection}
+                  />
+                ) : (
+                  <Material2Content 
+                    searchQuery={searchQuery}
+                    onSectionVisible={setActiveSection}
+                  />
+                )}
+              </div>
+            </main>
+          </div>
+        )}
       </div>
       
       <Footer />
