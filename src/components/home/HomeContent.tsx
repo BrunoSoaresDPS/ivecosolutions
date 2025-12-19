@@ -42,8 +42,8 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
           {/* IVECO SEU Card */}
           <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div 
-              className="relative p-4 sm:p-6 border-b border-border bg-cover bg-center"
-              style={{ backgroundImage: `url(${ivecoSeuHeader})` }}
+              className="relative p-4 sm:p-6 border-b border-border bg-cover"
+              style={{ backgroundImage: `url(${ivecoSeuHeader})`, backgroundPosition: 'center 30%' }}
             >
               <div className="absolute inset-0 bg-black/40" />
               <div className="relative z-10">
