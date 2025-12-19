@@ -97,8 +97,8 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
           {/* Cobertura de Planos Card */}
           <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div 
-              className="relative p-4 sm:p-6 border-b border-border bg-cover"
-              style={{ backgroundImage: `url(${coberturaPlanosHeader})`, backgroundPosition: 'center 40%' }}
+              className="relative p-4 sm:p-6 border-b border-border"
+              style={{ backgroundImage: `url(${coberturaPlanosHeader})`, backgroundPosition: 'center 40%', backgroundSize: '150%' }}
             >
               <div className="absolute inset-0 bg-black/40" />
               <div className="relative z-10">
