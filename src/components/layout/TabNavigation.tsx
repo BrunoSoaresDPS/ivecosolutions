@@ -12,7 +12,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
         <button
           onClick={() => onTabChange("home")}
           className={cn(
-            "py-4 px-6 text-sm font-medium transition-all duration-200 border-b-2",
+            "flex-1 py-4 px-6 text-sm font-medium transition-all duration-200 border-b-2",
             activeTab === "home"
               ? "text-primary border-primary bg-secondary/50"
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
@@ -23,7 +23,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
         <button
           onClick={() => onTabChange("material1")}
           className={cn(
-            "py-4 px-6 text-sm font-medium transition-all duration-200 border-b-2",
+            "flex-1 py-4 px-6 text-sm font-medium transition-all duration-200 border-b-2",
             activeTab === "material1"
               ? "text-primary border-primary bg-secondary/50"
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
@@ -34,7 +34,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
         <button
           onClick={() => onTabChange("material2")}
           className={cn(
-            "py-4 px-6 text-sm font-medium transition-all duration-200 border-b-2",
+            "flex-1 py-4 px-6 text-sm font-medium transition-all duration-200 border-b-2",
             activeTab === "material2"
               ? "text-primary border-primary bg-secondary/50"
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
