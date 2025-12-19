@@ -1,5 +1,6 @@
 import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBackground from "@/assets/hero-background.jpg";
 
 interface HomeContentProps {
   onNavigate: (tab: "material1" | "material2") => void;
@@ -8,13 +9,19 @@ interface HomeContentProps {
 export function HomeContent({ onNavigate }: HomeContentProps) {
   return (
     <div className="min-h-[calc(100vh-12rem)] flex flex-col">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground py-8 sm:py-12 md:py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
+      {/* Hero Section with Background Image */}
+      <div 
+        className="relative text-white py-12 sm:py-16 md:py-24 px-4 md:px-8 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      >
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+        
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 drop-shadow-lg">
             Soluções e Serviços IVECO
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-primary-foreground/90 max-w-3xl mx-auto px-2">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto px-2 drop-shadow-md">
             Conheça nossas soluções exclusivas para maximizar a eficiência e proteger seu investimento
           </p>
         </div>
