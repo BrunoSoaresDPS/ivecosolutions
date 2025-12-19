@@ -2,7 +2,7 @@ import { Search, Menu, Printer, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import ivecoLogo from "@/assets/iveco-logo-white.svg";
+import ivecoLogo from "@/assets/iveco-logo-new.png";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface HeaderProps {
@@ -51,7 +51,7 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
           )}
           <div className="flex items-center gap-2 sm:gap-4">
             <button onClick={onLogoClick} className="hover:opacity-80 transition-opacity">
-              <img src={ivecoLogo} alt="IVECO" className="h-6 sm:h-8 w-auto" />
+              <img src={ivecoLogo} alt="IVECO" className="h-6 sm:h-8 w-auto brightness-0 invert" />
             </button>
             <div className="hidden md:block">
               <p className="text-xs sm:text-sm text-white/70">
