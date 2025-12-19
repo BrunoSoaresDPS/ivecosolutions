@@ -51,7 +51,7 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
           )}
           <div className="flex items-center gap-2 sm:gap-4">
             <button onClick={onLogoClick} className="hover:opacity-80 transition-opacity">
-              <img src={ivecoLogo} alt="IVECO" className="h-6 sm:h-8 w-auto brightness-0 invert" />
+              <img src={ivecoLogo} alt="IVECO" className="h-4 sm:h-5 w-auto brightness-0 invert" />
             </button>
             <div className="hidden md:block">
               <p className="text-xs sm:text-sm text-white/70">
