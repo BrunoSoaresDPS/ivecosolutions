@@ -1,6 +1,7 @@
 import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ivecoSeuHeader from "@/assets/iveco-seu-header.jpg";
+import coberturaPlanosHeader from "@/assets/cobertura-planos-header.webp";
 
 interface HomeContentProps {
   onNavigate: (tab: "material1" | "material2") => void;
@@ -95,14 +96,20 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
 
           {/* Cobertura de Planos Card */}
           <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="bg-primary/10 p-4 sm:p-6 border-b border-border">
-              <div className="flex items-center gap-2 sm:gap-3 mb-2">
-                <div className="p-2 sm:p-3 bg-primary rounded-lg">
-                  <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+            <div 
+              className="relative p-4 sm:p-6 border-b border-border bg-cover"
+              style={{ backgroundImage: `url(${coberturaPlanosHeader})`, backgroundPosition: 'center 60%' }}
+            >
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                  <div className="p-2 sm:p-3 bg-primary rounded-lg">
+                    <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                  </div>
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">Cobertura de Planos</h2>
                 </div>
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">Cobertura de Planos</h2>
+                <p className="text-sm sm:text-base text-white/80">Planos de Serviços IVECO</p>
               </div>
-              <p className="text-sm sm:text-base text-muted-foreground">Planos de Serviços IVECO</p>
             </div>
             
             <div className="p-4 sm:p-6">
