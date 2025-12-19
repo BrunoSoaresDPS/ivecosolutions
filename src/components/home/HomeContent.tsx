@@ -1,5 +1,6 @@
-import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck } from "lucide-react";
+import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import ivecoSeuHeader from "@/assets/iveco-seu-header.jpg";
 import coberturaPlanosHeader from "@/assets/cobertura-planos-header.webp";
 
@@ -151,9 +152,17 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
 
         {/* Quick Info */}
         <div className="max-w-6xl mx-auto mt-6 sm:mt-8 md:mt-12 text-center px-2">
-          <p className="text-muted-foreground text-xs sm:text-sm">
+          <p className="text-muted-foreground text-xs sm:text-sm mb-6">
             Selecione uma das soluções acima para ver o conteúdo completo e detalhado
           </p>
+          
+          {/* FAQ/Chatbot Link */}
+          <Link to="/tire-suas-duvidas">
+            <Button variant="outline" className="gap-2">
+              <MessageCircle className="h-4 w-4" />
+              Tire suas Dúvidas
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
