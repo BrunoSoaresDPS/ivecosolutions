@@ -7,8 +7,8 @@ interface TabNavigationProps {
 
 export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
   return (
-    <div className="bg-card border-b border-border sticky top-16 z-30 no-print">
-      <div className="flex">
+    <div className="bg-card border-b border-border sticky top-16 z-40 no-print">
+      <div className="flex max-w-screen-2xl mx-auto">
         <button
           onClick={() => onTabChange("material1")}
           className={cn(
