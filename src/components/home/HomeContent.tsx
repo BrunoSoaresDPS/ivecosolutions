@@ -31,9 +31,15 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 drop-shadow-lg">
             Soluções e Serviços IVECO
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto px-2 drop-shadow-md">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto px-2 drop-shadow-md mb-6">
             Conheça nossas soluções exclusivas para maximizar a eficiência e proteger seu investimento
           </p>
+          <Link to="/tire-suas-duvidas">
+            <Button variant="outline" className="gap-2 bg-white/10 border-white/30 text-white hover:bg-white/20">
+              <MessageCircle className="h-4 w-4" />
+              Tire suas Dúvidas
+            </Button>
+          </Link>
         </div>
       </div>
 
