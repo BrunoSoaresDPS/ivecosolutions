@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import TireSuasDuvidas from "./pages/TireSuasDuvidas";
 import QTool from "./pages/QTool";
 import NexProConnect from "./pages/NexProConnect";
+import SSTraining from "./pages/SSTraining";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/tire-suas-duvidas" element={<TireSuasDuvidas />} />
             <Route path="/qtool" element={<QTool />} />
             <Route path="/nexpro-connect" element={<NexProConnect />} />
+            <Route path="/ss-training" element={<SSTraining />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
