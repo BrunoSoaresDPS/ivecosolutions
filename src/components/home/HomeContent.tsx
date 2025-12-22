@@ -1,4 +1,4 @@
-import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle } from "lucide-react";
+import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle, Calculator, Link2, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ivecoSeuHeader from "@/assets/iveco-seu-header.jpg";
@@ -153,6 +153,85 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
+          </div>
+        </div>
+
+        {/* Tools & Resources Grid */}
+        <div className="max-w-6xl mx-auto mt-6 sm:mt-8 md:mt-12">
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 text-center">
+            Ferramentas e Recursos
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            
+            {/* QTool Card */}
+            <Link to="/qtool" className="group">
+              <div className="bg-card border border-border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                <div className="p-4 sm:p-5 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-primary rounded-lg">
+                      <Calculator className="h-5 w-5 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">QTool</h3>
+                  </div>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Ferramenta de cotação e cálculos para serviços IVECO. Acesse rapidamente informações de preços e simulações.
+                  </p>
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
+                    Acessar QTool
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* NexPro Connect Card */}
+            <Link to="/nexpro-connect" className="group">
+              <div className="bg-card border border-border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                <div className="p-4 sm:p-5 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-primary rounded-lg">
+                      <Link2 className="h-5 w-5 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">NexPro Connect</h3>
+                  </div>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Plataforma de conectividade e telemetria IVECO. Monitore sua frota em tempo real e otimize operações.
+                  </p>
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
+                    Acessar NexPro
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* SS Training Card */}
+            <Link to="/ss-training" className="group">
+              <div className="bg-card border border-border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                <div className="p-4 sm:p-5 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-primary rounded-lg">
+                      <GraduationCap className="h-5 w-5 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">SS Training</h3>
+                  </div>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Plataforma de treinamentos e capacitação. Acesse cursos e materiais para aprimorar seus conhecimentos.
+                  </p>
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
+                    Acessar Training
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
           </div>
         </div>
 
