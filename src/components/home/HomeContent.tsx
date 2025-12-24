@@ -1,4 +1,4 @@
-import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle, Calculator, Link2, GraduationCap, Globe } from "lucide-react";
+import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle, Calculator, Link2, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ivecoSeuHeader from "@/assets/iveco-seu-header.jpg";
@@ -161,7 +161,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 text-center">
             Ferramentas e Recursos
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             
             {/* QTool Card */}
             <Link to="/qtool" className="group">
@@ -232,28 +232,6 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
               </div>
             </Link>
 
-            {/* IVECO ON Card */}
-            <Link to="/iveco-on" className="group">
-              <div className="bg-card border border-border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full">
-                <div className="p-4 sm:p-5 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-primary rounded-lg">
-                      <Globe className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground">IVECO ON</h3>
-                  </div>
-                </div>
-                <div className="p-4 sm:p-5">
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Portal de contratos e serviços conectados IVECO. Gerencie seus contratos e acesse funcionalidades exclusivas.
-                  </p>
-                  <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
-                    Acessar IVECO ON
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </div>
-                </div>
-              </div>
-            </Link>
 
           </div>
         </div>
