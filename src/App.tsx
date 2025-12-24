@@ -9,6 +9,7 @@ import TireSuasDuvidas from "./pages/TireSuasDuvidas";
 import QTool from "./pages/QTool";
 import NexProConnect from "./pages/NexProConnect";
 import SSTraining from "./pages/SSTraining";
+import IvecoOn from "./pages/IvecoOn";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/qtool" element={<QTool />} />
             <Route path="/nexpro-connect" element={<NexProConnect />} />
             <Route path="/ss-training" element={<SSTraining />} />
+            <Route path="/iveco-on" element={<IvecoOn />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
