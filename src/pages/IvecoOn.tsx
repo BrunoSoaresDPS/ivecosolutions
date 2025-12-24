@@ -38,7 +38,7 @@ export default function IvecoOn() {
       {/* Iframe Content */}
       <div className="flex-1">
         <iframe
-          src="https://www.iveco-on.com/contracts"
+          src="https://www.iveco-on.com/"
           title="IVECO ON"
           className="w-full h-full border-0"
           style={{ minHeight: 'calc(100vh - 57px)' }}
