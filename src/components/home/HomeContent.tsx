@@ -113,7 +113,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                   <div className="p-2 sm:p-3 bg-primary rounded-lg">
                     <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
                   </div>
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">Cobertura de Planos</h2>
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">Cobertura de Planos de Manutenção</h2>
                 </div>
                 <p className="text-sm sm:text-base text-white/80">Planos de Serviços IVECO</p>
               </div>
