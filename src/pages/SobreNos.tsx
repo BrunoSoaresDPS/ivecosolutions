@@ -1,67 +1,70 @@
 import { Header } from "@/components/layout/Header";
 import { TabNavigation } from "@/components/layout/TabNavigation";
 import { Footer } from "@/components/layout/Footer";
-import { Users, Briefcase, Globe, Target, TrendingUp, Settings, BarChart3, Truck } from "lucide-react";
-import teamStructureImage from "@/assets/team-structure.jpg";
+import { Users, Target, TrendingUp, User } from "lucide-react";
+
+interface TeamMember {
+  name: string;
+  role: string;
+}
+
+interface TeamLead {
+  name: string;
+  role: string;
+  area: string;
+  members: TeamMember[];
+}
 
 const SobreNos = () => {
-  const teamAreas = [
+  const headLeader = {
+    name: "Daniel Moreira",
+    role: "Head Service Solutions LATAM",
+  };
+
+  const directReports: TeamLead[] = [
     {
-      title: "Commercial Brazil",
-      lead: "Leonardo J. Albarracin",
+      name: "Leonardo J. Albarracin",
+      role: "Gerente",
+      area: "Commercial Brazil",
       members: [
         { name: "Lorrany Amorim", role: "Sales" },
         { name: "Nathan Oliveira", role: "Sales" },
         { name: "TBD", role: "Sales Assist" },
+        { name: "Bruno L Gomez", role: "Data Analysis" },
+        { name: "Lucas Soares", role: "Management & KPIs" },
         { name: "Caio João Silvano", role: "C. Renewal" },
+        { name: "Weberton Menezes", role: "IVECO SEU" },
+        { name: "Marcos Lopes", role: "IVECO SEU" },
+        { name: "Samuel Rodrigues", role: "IVECO SEU" },
+        { name: "Pablo Oliveira", role: "Rental Ops" },
+        { name: "TBD", role: "Claims Analysis BR" },
       ],
-      icon: Briefcase,
     },
     {
-      title: "Argentina",
-      lead: "Leia Mendonça",
+      name: "Leia Mendonça",
+      role: "Gerente",
+      area: "Argentina",
       members: [
         { name: "A. Nicolas", role: "Sales" },
         { name: "V. Gelardini", role: "Sales" },
+        { name: "TBD", role: "TCO Argentina" },
+        { name: "TBD", role: "Risk Argentina" },
+        { name: "TBD", role: "Claims Analysis" },
       ],
-      icon: Globe,
     },
     {
-      title: "Process & TCO LATAM",
-      lead: "Thiago Radieddine",
+      name: "Thiago Radieddine",
+      role: "Gerente",
+      area: "Process & TCO LATAM",
       members: [
         { name: "Marina Alexandre", role: "Process Adm." },
         { name: "Aline Quadros", role: "Process Adm." },
-        { name: "Juliano Reis", role: "TCO Brazil" },
-        { name: "TBD", role: "TCO Argentina" },
-        { name: "Bruno L Gomez", role: "Data Analysis" },
-        { name: "Lucas Soares", role: "Management & KPIs" },
-      ],
-      icon: BarChart3,
-    },
-    {
-      title: "Business Development",
-      lead: "",
-      members: [
         { name: "Vladmir Almeida", role: "Business Dev." },
         { name: "Taylor", role: "Projects" },
+        { name: "Juliano Reis", role: "TCO Brazil" },
         { name: "Rafael Almeida", role: "Risk Brazil" },
-        { name: "TBD", role: "Risk Argentina" },
-      ],
-      icon: TrendingUp,
-    },
-    {
-      title: "Operations",
-      lead: "",
-      members: [
-        { name: "Weberton Menezes", role: "IVECO SEU" },
-        { name: "Samuel Rodrigues", role: "IVECO SEU" },
-        { name: "Marcos Lopes", role: "IVECO SEU" },
-        { name: "Pablo Oliveira", role: "Rental Ops" },
-        { name: "TBD", role: "Claims Analysis BR" },
         { name: "TBD", role: "Telematics" },
       ],
-      icon: Settings,
     },
   ];
 
@@ -92,72 +95,69 @@ const SobreNos = () => {
           </div>
         </section>
 
-        {/* Team Leadership */}
-        <section className="py-12 sm:py-16 bg-card">
-          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-                Liderança
-              </h2>
-              <div className="bg-primary/10 rounded-xl p-6 sm:p-8 max-w-md mx-auto">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Truck className="h-10 w-10 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                  Daniel Moreira
-                </h3>
-                <p className="text-primary font-medium text-lg">
-                  Head Service Solutions LATAM
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Team Structure Image */}
-        <section className="py-12 sm:py-16 bg-background">
-          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 text-center">
+        {/* Organizational Chart */}
+        <section className="py-12 sm:py-16 bg-muted/30">
+          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-10 text-center">
               Estrutura Organizacional
             </h2>
-            <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border">
-              <img 
-                src={teamStructureImage} 
-                alt="Estrutura do Time Service Solutions LATAM" 
-                className="w-full h-auto"
-              />
+            
+            {/* Head Leader */}
+            <div className="flex flex-col items-center mb-8">
+              <div className="bg-primary text-primary-foreground rounded-xl p-6 shadow-xl min-w-[280px] text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <User className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold">{headLeader.name}</h3>
+                <p className="text-primary-foreground/80 text-sm mt-1">{headLeader.role}</p>
+              </div>
+              
+              {/* Connector line */}
+              <div className="w-0.5 h-8 bg-border" />
+              <div className="w-full max-w-4xl h-0.5 bg-border" />
             </div>
-          </div>
-        </section>
 
-        {/* Team Areas Grid */}
-        <section className="py-12 sm:py-16 bg-muted/30">
-          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 text-center">
-              Nossas Áreas
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {teamAreas.map((area, index) => (
-                <div key={index} className="bg-card rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-shadow">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <area.icon className="h-6 w-6 text-primary" />
+            {/* Direct Reports Row */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4">
+              {directReports.map((lead, leadIndex) => (
+                <div key={leadIndex} className="flex flex-col items-center">
+                  {/* Connector from top */}
+                  <div className="hidden lg:block w-0.5 h-8 bg-border" />
+                  
+                  {/* Lead Card */}
+                  <div className="bg-card border-2 border-primary rounded-xl p-5 shadow-lg min-w-[260px] text-center mb-4">
+                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <User className="h-7 w-7 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-bold text-foreground">{area.title}</h3>
-                      {area.lead && (
-                        <p className="text-sm text-primary font-medium">{area.lead}</p>
-                      )}
-                    </div>
+                    <h3 className="text-lg font-bold text-foreground">{lead.name}</h3>
+                    <p className="text-primary font-medium text-sm">{lead.role}</p>
+                    <p className="text-muted-foreground text-xs mt-1 bg-muted px-3 py-1 rounded-full inline-block">
+                      {lead.area}
+                    </p>
                   </div>
-                  <ul className="space-y-2">
-                    {area.members.map((member, memberIndex) => (
-                      <li key={memberIndex} className="flex justify-between items-center text-sm py-1 border-b border-border/50 last:border-0">
-                        <span className="text-foreground">{member.name}</span>
-                        <span className="text-muted-foreground text-xs">{member.role}</span>
-                      </li>
+
+                  {/* Connector to team */}
+                  <div className="w-0.5 h-4 bg-border" />
+
+                  {/* Team Members */}
+                  <div className="w-full space-y-2">
+                    {lead.members.map((member, memberIndex) => (
+                      <div 
+                        key={memberIndex} 
+                        className="bg-card border border-border rounded-lg p-3 shadow-sm hover:shadow-md hover:border-primary/30 transition-all flex items-center gap-3"
+                      >
+                        <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
+                          <User className="h-5 w-5 text-muted-foreground" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className={`font-medium text-sm truncate ${member.name === "TBD" ? "text-muted-foreground italic" : "text-foreground"}`}>
+                            {member.name}
+                          </p>
+                          <p className="text-xs text-muted-foreground truncate">{member.role}</p>
+                        </div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
