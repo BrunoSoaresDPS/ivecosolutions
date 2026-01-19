@@ -3,29 +3,31 @@ import { TabNavigation } from "@/components/layout/TabNavigation";
 import { Footer } from "@/components/layout/Footer";
 import { Users, Target, TrendingUp, User } from "lucide-react";
 
-// Team photos imports
+// Team photos imports - correctly mapped
 import danielMoreira from "@/assets/team/daniel-moreira.jpg";
-import leonardoAlbarracin from "@/assets/team/leonardo-albarracin.jpg";
+import leonardoCampos from "@/assets/team/leonardo-campos.jpg";
+import jAlbarracin from "@/assets/team/j-albarracin.jpg";
 import leiaMendonca from "@/assets/team/leia-mendonca.jpg";
 import thiagoRadieddine from "@/assets/team/thiago-radieddine.jpg";
 import lorranyAmorim from "@/assets/team/lorrany-amorim.jpg";
 import nathanOliveira from "@/assets/team/nathan-oliveira.jpg";
 import aNicolas from "@/assets/team/a-nicolas.jpg";
 import vGelardini from "@/assets/team/v-gelardini.jpg";
-import marinaAlexandre from "@/assets/team/marina-alexandre.jpg";
-import alineQuadros from "@/assets/team/aline-quadros.jpg";
-import vladmirAlmeida from "@/assets/team/vladmir-almeida.jpg";
-import taylor from "@/assets/team/taylor.jpg";
-import tbdSalesAssist from "@/assets/team/tbd-sales-assist.jpg";
-import brunoGomez from "@/assets/team/bruno-gomez.jpg";
-import lucasSoares from "@/assets/team/lucas-soares.jpg";
+import marinaFernandes from "@/assets/team/marina-fernandes.jpg";
+import alineAlexandre from "@/assets/team/aline-alexandre.jpg";
+import vladmirQuadros from "@/assets/team/vladmir-quadros.jpg";
+import taylorAlmeida from "@/assets/team/taylor-almeida.jpg";
+import brunoSoares from "@/assets/team/bruno-soares.jpg";
+import lGomez from "@/assets/team/l-gomez.jpg";
+import lucasMoreira from "@/assets/team/lucas-moreira.jpg";
+import brizaDiez from "@/assets/team/briza-diez.jpg";
+import joaoSilvano from "@/assets/team/joao-silvano.jpg";
+import caioMenezes from "@/assets/team/caio-menezes.jpg";
 import julianoReis from "@/assets/team/juliano-reis.jpg";
-import tbdRiskArgentina from "@/assets/team/tbd-risk-argentina.jpg";
+import webertonOliveira from "@/assets/team/weberton-oliveira.jpg";
+import pabloPereira from "@/assets/team/pablo-pereira.jpg";
+import samuelRodrigues from "@/assets/team/samuel-rodrigues.jpg";
 import rafaelAlmeida from "@/assets/team/rafael-almeida.jpg";
-import caioSilvano from "@/assets/team/caio-silvano.jpg";
-import webertonMenezes from "@/assets/team/weberton-menezes.jpg";
-import pabloOliveira from "@/assets/team/pablo-oliveira.jpg";
-import tbdTelematics from "@/assets/team/tbd-telematics.jpg";
 import marcosLopes from "@/assets/team/marcos-lopes.jpg";
 
 interface TeamMember {
@@ -73,10 +75,10 @@ const SobreNos = () => {
   // Head
   const head = { name: "DANIEL MOREIRA", role: "Head Service Solutions LATAM", photo: danielMoreira };
 
-  // 4 Direct Reports
+  // 4 Direct Reports - matching the reference image exactly
   const managers = [
-    { name: "LEONARDO CAMPOS", role: "Commercial Brazil", photo: leonardoAlbarracin },
-    { name: "J. ALBARRACIN", role: "Commercial Argentina", photo: aNicolas },
+    { name: "LEONARDO CAMPOS", role: "Commercial Brazil", photo: leonardoCampos },
+    { name: "J. ALBARRACIN", role: "Commercial Argentina", photo: jAlbarracin },
     { name: "LEIA MENDONÇA", role: "Process & TCO LATAM", photo: leiaMendonca },
     { name: "THIAGO RADIEDDINE", role: "Business Performance & Risk LATAM", photo: thiagoRadieddine },
   ];
@@ -85,43 +87,43 @@ const SobreNos = () => {
   const leonardoTeamCol1: TeamMember[] = [
     { name: "LORRANY AMORIM", role: "Sales", photo: lorranyAmorim },
     { name: "TBD", role: "Sales Assist", photo: "", isTbd: true },
-    { name: "JOÃO SILVANO", role: "C. Renewal", photo: caioSilvano },
+    { name: "JOÃO SILVANO", role: "C. Renewal", photo: joaoSilvano },
     { name: "MARCOS LOPES", role: "IVECO SEU", photo: marcosLopes },
   ];
   const leonardoTeamCol2: TeamMember[] = [
     { name: "NATHAN OLIVEIRA", role: "Sales", photo: nathanOliveira },
-    { name: "BRUNO SOARES", role: "Data Analysis", photo: brunoGomez },
-    { name: "CAIO MENEZES", role: "IVECO SEU", photo: caioSilvano },
+    { name: "BRUNO SOARES", role: "Data Analysis", photo: brunoSoares },
+    { name: "CAIO MENEZES", role: "IVECO SEU", photo: caioMenezes },
   ];
 
   // Team under J. Albarracin
   const albarracinTeam: TeamMember[] = [
     { name: "A. NICOLAS", role: "Sales", photo: aNicolas },
     { name: "V. GELARDINI", role: "Sales", photo: vGelardini },
-    { name: "L GOMEZ", role: "C. Management & KPIs", photo: lucasSoares },
+    { name: "L GOMEZ", role: "C. Management & KPIs", photo: lGomez },
   ];
 
   // Team under Leia Mendonça - 2 columns
   const leiaTeamCol1: TeamMember[] = [
-    { name: "MARINA FERNANDES", role: "Process Adm.", photo: marinaAlexandre },
-    { name: "LUCAS MOREIRA", role: "TCO Brazil", photo: lucasSoares },
-    { name: "WEBERTON OLIVEIRA", role: "Rental Ops", photo: webertonMenezes },
-    { name: "SAMUEL RODRIGUES", role: "Claims Analysis", photo: webertonMenezes },
+    { name: "MARINA FERNANDES", role: "Process Adm.", photo: marinaFernandes },
+    { name: "LUCAS MOREIRA", role: "TCO Brazil", photo: lucasMoreira },
+    { name: "WEBERTON OLIVEIRA", role: "Rental Ops", photo: webertonOliveira },
+    { name: "SAMUEL RODRIGUES", role: "Claims Analysis", photo: samuelRodrigues },
   ];
   const leiaTeamCol2: TeamMember[] = [
-    { name: "ALINE ALEXANDRE", role: "Process Adm.", photo: alineQuadros },
+    { name: "ALINE ALEXANDRE", role: "Process Adm.", photo: alineAlexandre },
     { name: "JULIANO REIS", role: "TCO Argentina", photo: julianoReis },
-    { name: "PABLO PEREIRA", role: "Claims Analysis BR e ARG", photo: pabloOliveira },
+    { name: "PABLO PEREIRA", role: "Claims Analysis BR e ARG", photo: pabloPereira },
   ];
 
   // Team under Thiago Radieddine - 2 columns
   const thiagoTeamCol1: TeamMember[] = [
-    { name: "VLADMIR QUADROS", role: "Business Dev.", photo: vladmirAlmeida },
-    { name: "Briza Diez", role: "Risk Argentina", photo: tbdRiskArgentina },
+    { name: "VLADMIR QUADROS", role: "Business Dev.", photo: vladmirQuadros },
+    { name: "BRIZA DIEZ", role: "Risk Argentina", photo: brizaDiez },
     { name: "TBD", role: "Telematics", photo: "", isTbd: true },
   ];
   const thiagoTeamCol2: TeamMember[] = [
-    { name: "TAYLOR ALMEIDA", role: "Projects", photo: taylor },
+    { name: "TAYLOR ALMEIDA", role: "Projects", photo: taylorAlmeida },
     { name: "RAFAEL ALMEIDA", role: "Risk Brazil", photo: rafaelAlmeida },
   ];
 
