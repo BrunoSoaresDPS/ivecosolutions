@@ -6,12 +6,13 @@ import { ToolsSidebar } from "@/components/layout/ToolsSidebar";
 import { TabNavigation } from "@/components/layout/TabNavigation";
 import { Material1Content } from "@/components/materials/Material1Content";
 import { Material2Content } from "@/components/materials/Material2Content";
+import { TelemetriaContent } from "@/components/materials/TelemetriaContent";
 import { HomeContent } from "@/components/home/HomeContent";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
   const { t } = useLanguage();
-  const [activeTab, setActiveTab] = useState<"home" | "material1" | "material2">("home");
+  const [activeTab, setActiveTab] = useState<"home" | "material1" | "material2" | "telemetria">("home");
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
@@ -39,6 +40,13 @@ const Index = () => {
     { id: "telemetria", title: t.sidebarTelemetry },
   ], [t]);
 
+  const telemetriaSections = useMemo(() => [
+    { id: "intro-telemetria", title: t.sidebarTelemetriaIntro },
+    { id: "nexpro", title: t.sidebarNexpro },
+    { id: "iveco-on", title: t.sidebarIvecoOn },
+    { id: "comparativo", title: t.sidebarComparativo },
+  ], [t]);
+
   // Reset search and section when tab changes
   useEffect(() => {
     setSearchQuery("");
@@ -46,6 +54,8 @@ const Index = () => {
       setActiveSection("intro");
     } else if (activeTab === "material2") {
       setActiveSection("intro2");
+    } else if (activeTab === "telemetria") {
+      setActiveSection("intro-telemetria");
     }
   }, [activeTab]);
 
@@ -61,7 +71,11 @@ const Index = () => {
     setSearchQuery(query);
   };
 
-  const currentSections = activeTab === "material1" ? material1Sections : material2Sections;
+  const currentSections = activeTab === "material1" 
+    ? material1Sections 
+    : activeTab === "material2" 
+      ? material2Sections 
+      : telemetriaSections;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -98,8 +112,13 @@ const Index = () => {
                     searchQuery={searchQuery}
                     onSectionVisible={setActiveSection}
                   />
-                ) : (
+                ) : activeTab === "material2" ? (
                   <Material2Content 
+                    searchQuery={searchQuery}
+                    onSectionVisible={setActiveSection}
+                  />
+                ) : (
+                  <TelemetriaContent 
                     searchQuery={searchQuery}
                     onSectionVisible={setActiveSection}
                   />

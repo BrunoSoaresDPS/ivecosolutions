@@ -16,6 +16,7 @@ interface Translations {
   oneDriveSecurityNote: string;
   openOneDrive: string;
   faq: string;
+  telemetryTab: string;
   
   // Tools Sidebar
   tools: string;
@@ -56,6 +57,17 @@ interface Translations {
   telemetryIncluded: string;
   telemetryIncludedDesc: string;
   
+  // Telemetry Card
+  telemetryCardTitle: string;
+  telemetryCardSubtitle: string;
+  telemetryCardDescription: string;
+  telemetryCardFeature1: string;
+  telemetryCardFeature1Desc: string;
+  telemetryCardFeature2: string;
+  telemetryCardFeature2Desc: string;
+  telemetryCardFeature3: string;
+  telemetryCardFeature3Desc: string;
+  
   // Tools Cards
   qtoolDescription: string;
   accessQtool: string;
@@ -85,6 +97,88 @@ interface Translations {
   sidebarCompletePlan: string;
   sidebarExclusions: string;
   sidebarTelemetry: string;
+  
+  // Sidebar Sections - Telemetria
+  sidebarTelemetriaIntro: string;
+  sidebarNexpro: string;
+  sidebarIvecoOn: string;
+  sidebarComparativo: string;
+  
+  // Telemetria Content
+  telemetryIntroTitle: string;
+  telemetryIntroDesc: string;
+  telemetryIntroHighlightTitle: string;
+  telemetryIntroNote: string;
+  telemetryFeature1: string;
+  telemetryFeature1Desc: string;
+  telemetryFeature2: string;
+  telemetryFeature2Desc: string;
+  telemetryFeature3: string;
+  telemetryFeature3Desc: string;
+  
+  // NexPro Connect Content
+  nexproConnectTitle: string;
+  nexproConnectHighlightTitle: string;
+  nexproConnectHighlight: string;
+  nexproConnectFullDesc: string;
+  nexproFeature1: string;
+  nexproFeature1Desc: string;
+  nexproFeature2: string;
+  nexproFeature2Desc: string;
+  nexproFeature3: string;
+  nexproFeature3Desc: string;
+  nexproFeature4: string;
+  nexproFeature4Desc: string;
+  nexproPackagesTitle: string;
+  nexproPackage1: string;
+  nexproPackage2: string;
+  nexproPackage3: string;
+  nexproPackage4: string;
+  nexproPackage5: string;
+  nexproPackage6: string;
+  nexproNumbers: string;
+  nexproNumbersDesc: string;
+  
+  // IVECO ON Content
+  ivecoOnTitleFull: string;
+  ivecoOnHighlightTitle: string;
+  ivecoOnHighlight: string;
+  ivecoOnFullDesc: string;
+  ivecoOnBasicTitle: string;
+  ivecoOnFeature1: string;
+  ivecoOnFeature1Desc: string;
+  ivecoOnFeature2: string;
+  ivecoOnFeature2Desc: string;
+  ivecoOnFeature3: string;
+  ivecoOnFeature3Desc: string;
+  ivecoOnFeature4: string;
+  ivecoOnFeature4Desc: string;
+  ivecoOnPortalTitle: string;
+  ivecoOnPortal1: string;
+  ivecoOnPortal2: string;
+  ivecoOnPortal3: string;
+  ivecoOnPortal4: string;
+  ivecoOnPortal5: string;
+  ivecoOnAppTitle: string;
+  ivecoOnAppDesc: string;
+  ivecoOnAccessTitle: string;
+  ivecoOnAccessDesc: string;
+  
+  // Telemetry Compare
+  telemetryCompareTitle: string;
+  telemetryCompareDesc: string;
+  telemetryCompareFeature: string;
+  compareRow1: string;
+  compareRow2: string;
+  compareRow3: string;
+  compareRow4: string;
+  compareRow5: string;
+  compareRow6: string;
+  compareRow7: string;
+  compareMultibrand: string;
+  compareSway: string;
+  telemetryCompareTipTitle: string;
+  telemetryCompareTip: string;
   
   // Material 1 - IVECO SEU
   m1IntroTitle: string;
@@ -456,6 +550,100 @@ const translations: Record<Language, Translations> = {
     year: "ano",
     years: "anos",
     
+    // Telemetry Tab and Card
+    telemetryTab: "Telemetria",
+    telemetryCardTitle: "Telemetria",
+    telemetryCardSubtitle: "Soluções de Conectividade",
+    telemetryCardDescription: "Conecte sua frota e transforme dados em resultados. Monitore veículos em tempo real, analise performance e otimize operações.",
+    telemetryCardFeature1: "NexPro Connect",
+    telemetryCardFeature1Desc: "Plataforma multimarcas",
+    telemetryCardFeature2: "IVECO ON",
+    telemetryCardFeature2Desc: "Exclusivo para S-WAY",
+    telemetryCardFeature3: "Gestão Inteligente",
+    telemetryCardFeature3Desc: "Dados em tempo real",
+    
+    // Sidebar Sections - Telemetria
+    sidebarTelemetriaIntro: "Introdução",
+    sidebarNexpro: "NexPro Connect",
+    sidebarIvecoOn: "IVECO ON",
+    sidebarComparativo: "Comparativo",
+    
+    // Telemetria Content
+    telemetryIntroTitle: "Telemetria - Conectividade que Gera Resultados",
+    telemetryIntroDesc: "A telemetria permite monitorar em tempo real toda a dinâmica do veículo e do motorista. Com essa tecnologia, é possível fazer uma gestão de frota muito mais eficiente, levando em consideração o comportamento dos veículos e motoristas em rotas e trabalhos distintos.",
+    telemetryIntroHighlightTitle: "Por que Telemetria?",
+    telemetryIntroNote: "Reduza custos da sua frota e tenha controle da eficiência dos veículos. A IVECO está empenhada em proteger o valor e a produtividade do seu veículo ao longo do tempo.",
+    telemetryFeature1: "Gestão de Performance",
+    telemetryFeature1Desc: "Acompanhe indicadores de desempenho e custos operacionais",
+    telemetryFeature2: "Redução de Consumo",
+    telemetryFeature2Desc: "Identifique oportunidades de economia de combustível",
+    telemetryFeature3: "Segurança Operacional",
+    telemetryFeature3Desc: "Monitore comportamento de condução e previna riscos",
+    
+    // NexPro Connect Content
+    nexproConnectTitle: "NexPro Connect - Sua Frota Conectada",
+    nexproConnectHighlightTitle: "Solução Multimarcas",
+    nexproConnectHighlight: "Conecte sua frota para converter dados em resultados. Plataforma de telemetria que suporta veículos de múltiplas marcas em uma única interface.",
+    nexproConnectFullDesc: "O NexPro Connect oferece tecnologia de informações remotas através de sensores avançados e conectividade inteligente. A plataforma coleta dados diretamente da rede CAN do veículo, garantindo informações precisas e em tempo real.",
+    nexproFeature1: "Localização da Frota",
+    nexproFeature1Desc: "Rastreamento GPS em tempo real de todos os veículos",
+    nexproFeature2: "Consumo de Combustível",
+    nexproFeature2Desc: "Monitoramento detalhado do consumo e eficiência",
+    nexproFeature3: "Avaliação de Condução",
+    nexproFeature3Desc: "Análise do estilo de condução dos motoristas",
+    nexproFeature4: "Relatórios Completos",
+    nexproFeature4Desc: "Relatórios de viagem, performance e análises",
+    nexproPackagesTitle: "Pacotes Disponíveis",
+    nexproPackage1: "Gestão de Frota e Localização",
+    nexproPackage2: "Simulador de Cabine",
+    nexproPackage3: "Relatórios de Viagem e Performance",
+    nexproPackage4: "Análise de Consumo de Combustível",
+    nexproPackage5: "Controle de Jornada",
+    nexproPackage6: "API NexPro Connect para integração",
+    nexproNumbers: "+6.000 veículos conectados",
+    nexproNumbersDesc: "+150 revendedores e +75.000 dados coletados diariamente com até 70 parâmetros",
+    
+    // IVECO ON Content
+    ivecoOnTitleFull: "IVECO ON - O Novo Mundo de Conectividade",
+    ivecoOnHighlightTitle: "Exclusivo S-WAY",
+    ivecoOnHighlight: "Sistema que monitora em tempo real toda a dinâmica do veículo S-WAY, oferecendo conectividade exclusiva da IVECO.",
+    ivecoOnFullDesc: "O IVECO ON é a solução de conectividade exclusiva para o S-WAY que permite acessar serviços como telemetria avançada, atualizações de software e diagnósticos remotos. A plataforma oferece uma experiência completa de gestão.",
+    ivecoOnBasicTitle: "IVECO ON Básico",
+    ivecoOnFeature1: "Monitoramento em Tempo Real",
+    ivecoOnFeature1Desc: "Acompanhe veículos e motoristas em tempo real",
+    ivecoOnFeature2: "Relatórios Inteligentes",
+    ivecoOnFeature2Desc: "Relatórios semanais automáticos com dicas de economia",
+    ivecoOnFeature3: "Easy Way App",
+    ivecoOnFeature3Desc: "Aplicativo para controle digital a bordo do veículo",
+    ivecoOnFeature4: "Cerca Eletrônica",
+    ivecoOnFeature4Desc: "Alertas quando o veículo entra em áreas definidas",
+    ivecoOnPortalTitle: "Recursos do Portal",
+    ivecoOnPortal1: "Monitoramento de veículos e motoristas",
+    ivecoOnPortal2: "Análise de estilo de condução (DSE)",
+    ivecoOnPortal3: "Gráfico de emissão de CO2",
+    ivecoOnPortal4: "Acompanhamento de rotas diárias",
+    ivecoOnPortal5: "Visualização do painel do veículo",
+    ivecoOnAppTitle: "Aplicativo Easy Way",
+    ivecoOnAppDesc: "Leve a sua vida digital a bordo com todas as funcionalidades para controlar e conhecer mais sobre seu estilo de condução. Controle de travamento de portas, janelas, luzes internas e multimídia.",
+    ivecoOnAccessTitle: "Acesse o Portal IVECO ON",
+    ivecoOnAccessDesc: "Gerencie contratos e acesse funcionalidades exclusivas",
+    
+    // Telemetry Compare
+    telemetryCompareTitle: "Comparativo das Soluções",
+    telemetryCompareDesc: "Compare as funcionalidades de cada plataforma de telemetria para escolher a melhor opção para sua frota.",
+    telemetryCompareFeature: "Funcionalidade",
+    compareRow1: "Localização GPS",
+    compareRow2: "Consumo de Combustível",
+    compareRow3: "Avaliação de Condução",
+    compareRow4: "Suporte Multimarcas",
+    compareRow5: "Atualizações OTA",
+    compareRow6: "API de Integração",
+    compareRow7: "Veículos Compatíveis",
+    compareMultibrand: "Multimarcas",
+    compareSway: "S-WAY",
+    telemetryCompareTipTitle: "Dica",
+    telemetryCompareTip: "Para frotas mistas com diferentes marcas, o NexPro Connect é a escolha ideal. Para frotas 100% IVECO S-WAY, o IVECO ON oferece recursos exclusivos e integração mais profunda.",
+    
     allRightsReserved: "Todos os direitos reservados",
     print: "Imprimir",
     backToTop: "Voltar ao topo",
@@ -689,6 +877,100 @@ const translations: Record<Language, Translations> = {
     year: "año",
     years: "años",
     
+    // Telemetry Tab and Card
+    telemetryTab: "Telemetría",
+    telemetryCardTitle: "Telemetría",
+    telemetryCardSubtitle: "Soluciones de Conectividad",
+    telemetryCardDescription: "Conecte su flota y transforme datos en resultados. Monitoree vehículos en tiempo real, analice rendimiento y optimice operaciones.",
+    telemetryCardFeature1: "NexPro Connect",
+    telemetryCardFeature1Desc: "Plataforma multimarca",
+    telemetryCardFeature2: "IVECO ON",
+    telemetryCardFeature2Desc: "Exclusivo para S-WAY",
+    telemetryCardFeature3: "Gestión Inteligente",
+    telemetryCardFeature3Desc: "Datos en tiempo real",
+    
+    // Sidebar Sections - Telemetria
+    sidebarTelemetriaIntro: "Introducción",
+    sidebarNexpro: "NexPro Connect",
+    sidebarIvecoOn: "IVECO ON",
+    sidebarComparativo: "Comparativo",
+    
+    // Telemetria Content
+    telemetryIntroTitle: "Telemetría - Conectividad que Genera Resultados",
+    telemetryIntroDesc: "La telemetría permite monitorear en tiempo real toda la dinámica del vehículo y del conductor. Con esta tecnología, es posible hacer una gestión de flota mucho más eficiente.",
+    telemetryIntroHighlightTitle: "¿Por qué Telemetría?",
+    telemetryIntroNote: "Reduzca costos de su flota y tenga control de la eficiencia de los vehículos. IVECO está comprometida en proteger el valor y la productividad de su vehículo.",
+    telemetryFeature1: "Gestión de Rendimiento",
+    telemetryFeature1Desc: "Acompañe indicadores de desempeño y costos operativos",
+    telemetryFeature2: "Reducción de Consumo",
+    telemetryFeature2Desc: "Identifique oportunidades de ahorro de combustible",
+    telemetryFeature3: "Seguridad Operacional",
+    telemetryFeature3Desc: "Monitoree comportamiento de conducción y prevenga riesgos",
+    
+    // NexPro Connect Content
+    nexproConnectTitle: "NexPro Connect - Su Flota Conectada",
+    nexproConnectHighlightTitle: "Solución Multimarca",
+    nexproConnectHighlight: "Conecte su flota para convertir datos en resultados. Plataforma de telemetría que soporta vehículos de múltiples marcas.",
+    nexproConnectFullDesc: "NexPro Connect ofrece tecnología de información remota a través de sensores avanzados y conectividad inteligente.",
+    nexproFeature1: "Localización de Flota",
+    nexproFeature1Desc: "Rastreo GPS en tiempo real de todos los vehículos",
+    nexproFeature2: "Consumo de Combustible",
+    nexproFeature2Desc: "Monitoreo detallado del consumo y eficiencia",
+    nexproFeature3: "Evaluación de Conducción",
+    nexproFeature3Desc: "Análisis del estilo de conducción de los conductores",
+    nexproFeature4: "Informes Completos",
+    nexproFeature4Desc: "Informes de viaje, rendimiento y análisis",
+    nexproPackagesTitle: "Paquetes Disponibles",
+    nexproPackage1: "Gestión de Flota y Localización",
+    nexproPackage2: "Simulador de Cabina",
+    nexproPackage3: "Informes de Viaje y Rendimiento",
+    nexproPackage4: "Análisis de Consumo de Combustible",
+    nexproPackage5: "Control de Jornada",
+    nexproPackage6: "API NexPro Connect para integración",
+    nexproNumbers: "+6.000 vehículos conectados",
+    nexproNumbersDesc: "+150 concesionarios y +75.000 datos recopilados diariamente",
+    
+    // IVECO ON Content
+    ivecoOnTitleFull: "IVECO ON - El Nuevo Mundo de Conectividad",
+    ivecoOnHighlightTitle: "Exclusivo S-WAY",
+    ivecoOnHighlight: "Sistema que monitorea en tiempo real toda la dinámica del vehículo S-WAY.",
+    ivecoOnFullDesc: "IVECO ON es la solución de conectividad exclusiva para el S-WAY que permite acceder a servicios como telemetría avanzada y diagnósticos remotos.",
+    ivecoOnBasicTitle: "IVECO ON Básico",
+    ivecoOnFeature1: "Monitoreo en Tiempo Real",
+    ivecoOnFeature1Desc: "Acompañe vehículos y conductores en tiempo real",
+    ivecoOnFeature2: "Informes Inteligentes",
+    ivecoOnFeature2Desc: "Informes semanales automáticos con consejos de ahorro",
+    ivecoOnFeature3: "Easy Way App",
+    ivecoOnFeature3Desc: "Aplicación para control digital a bordo del vehículo",
+    ivecoOnFeature4: "Cerca Electrónica",
+    ivecoOnFeature4Desc: "Alertas cuando el vehículo entra en áreas definidas",
+    ivecoOnPortalTitle: "Recursos del Portal",
+    ivecoOnPortal1: "Monitoreo de vehículos y conductores",
+    ivecoOnPortal2: "Análisis de estilo de conducción (DSE)",
+    ivecoOnPortal3: "Gráfico de emisión de CO2",
+    ivecoOnPortal4: "Seguimiento de rutas diarias",
+    ivecoOnPortal5: "Visualización del panel del vehículo",
+    ivecoOnAppTitle: "Aplicación Easy Way",
+    ivecoOnAppDesc: "Lleve su vida digital a bordo con todas las funcionalidades para controlar su estilo de conducción.",
+    ivecoOnAccessTitle: "Acceda al Portal IVECO ON",
+    ivecoOnAccessDesc: "Gestione contratos y acceda a funcionalidades exclusivas",
+    
+    // Telemetry Compare
+    telemetryCompareTitle: "Comparativo de Soluciones",
+    telemetryCompareDesc: "Compare las funcionalidades de cada plataforma para elegir la mejor opción para su flota.",
+    telemetryCompareFeature: "Funcionalidad",
+    compareRow1: "Localización GPS",
+    compareRow2: "Consumo de Combustible",
+    compareRow3: "Evaluación de Conducción",
+    compareRow4: "Soporte Multimarca",
+    compareRow5: "Actualizaciones OTA",
+    compareRow6: "API de Integración",
+    compareRow7: "Vehículos Compatibles",
+    compareMultibrand: "Multimarca",
+    compareSway: "S-WAY",
+    telemetryCompareTipTitle: "Consejo",
+    telemetryCompareTip: "Para flotas mixtas con diferentes marcas, NexPro Connect es la elección ideal. Para flotas 100% IVECO S-WAY, IVECO ON ofrece recursos exclusivos.",
+    
     allRightsReserved: "Todos los derechos reservados",
     print: "Imprimir",
     backToTop: "Volver arriba",
@@ -921,6 +1203,100 @@ const translations: Record<Language, Translations> = {
     performance: "Performance",
     year: "year",
     years: "years",
+    
+    // Telemetry Tab and Card
+    telemetryTab: "Telemetry",
+    telemetryCardTitle: "Telemetry",
+    telemetryCardSubtitle: "Connectivity Solutions",
+    telemetryCardDescription: "Connect your fleet and transform data into results. Monitor vehicles in real time, analyze performance and optimize operations.",
+    telemetryCardFeature1: "NexPro Connect",
+    telemetryCardFeature1Desc: "Multi-brand platform",
+    telemetryCardFeature2: "IVECO ON",
+    telemetryCardFeature2Desc: "Exclusive for S-WAY",
+    telemetryCardFeature3: "Smart Management",
+    telemetryCardFeature3Desc: "Real-time data",
+    
+    // Sidebar Sections - Telemetria
+    sidebarTelemetriaIntro: "Introduction",
+    sidebarNexpro: "NexPro Connect",
+    sidebarIvecoOn: "IVECO ON",
+    sidebarComparativo: "Comparison",
+    
+    // Telemetria Content
+    telemetryIntroTitle: "Telemetry - Connectivity that Delivers Results",
+    telemetryIntroDesc: "Telemetry allows real-time monitoring of the entire vehicle and driver dynamics. With this technology, it's possible to manage fleets much more efficiently.",
+    telemetryIntroHighlightTitle: "Why Telemetry?",
+    telemetryIntroNote: "Reduce your fleet costs and have control over vehicle efficiency. IVECO is committed to protecting the value and productivity of your vehicle.",
+    telemetryFeature1: "Performance Management",
+    telemetryFeature1Desc: "Track performance indicators and operational costs",
+    telemetryFeature2: "Consumption Reduction",
+    telemetryFeature2Desc: "Identify fuel saving opportunities",
+    telemetryFeature3: "Operational Safety",
+    telemetryFeature3Desc: "Monitor driving behavior and prevent risks",
+    
+    // NexPro Connect Content
+    nexproConnectTitle: "NexPro Connect - Your Connected Fleet",
+    nexproConnectHighlightTitle: "Multi-brand Solution",
+    nexproConnectHighlight: "Connect your fleet to convert data into results. Telemetry platform that supports multi-brand vehicles.",
+    nexproConnectFullDesc: "NexPro Connect offers remote information technology through advanced sensors and intelligent connectivity.",
+    nexproFeature1: "Fleet Location",
+    nexproFeature1Desc: "Real-time GPS tracking of all vehicles",
+    nexproFeature2: "Fuel Consumption",
+    nexproFeature2Desc: "Detailed monitoring of consumption and efficiency",
+    nexproFeature3: "Driving Evaluation",
+    nexproFeature3Desc: "Analysis of drivers' driving style",
+    nexproFeature4: "Complete Reports",
+    nexproFeature4Desc: "Trip, performance and analysis reports",
+    nexproPackagesTitle: "Available Packages",
+    nexproPackage1: "Fleet Management and Location",
+    nexproPackage2: "Cabin Simulator",
+    nexproPackage3: "Trip and Performance Reports",
+    nexproPackage4: "Fuel Consumption Analysis",
+    nexproPackage5: "Journey Control",
+    nexproPackage6: "NexPro Connect API for integration",
+    nexproNumbers: "+6,000 connected vehicles",
+    nexproNumbersDesc: "+150 dealers and +75,000 data collected daily",
+    
+    // IVECO ON Content
+    ivecoOnTitleFull: "IVECO ON - The New World of Connectivity",
+    ivecoOnHighlightTitle: "S-WAY Exclusive",
+    ivecoOnHighlight: "System that monitors in real time all dynamics of the S-WAY vehicle.",
+    ivecoOnFullDesc: "IVECO ON is the exclusive connectivity solution for the S-WAY that allows access to services such as advanced telemetry and remote diagnostics.",
+    ivecoOnBasicTitle: "IVECO ON Basic",
+    ivecoOnFeature1: "Real-time Monitoring",
+    ivecoOnFeature1Desc: "Track vehicles and drivers in real time",
+    ivecoOnFeature2: "Smart Reports",
+    ivecoOnFeature2Desc: "Automatic weekly reports with savings tips",
+    ivecoOnFeature3: "Easy Way App",
+    ivecoOnFeature3Desc: "App for digital control on board the vehicle",
+    ivecoOnFeature4: "Electronic Fence",
+    ivecoOnFeature4Desc: "Alerts when the vehicle enters defined areas",
+    ivecoOnPortalTitle: "Portal Features",
+    ivecoOnPortal1: "Vehicle and driver monitoring",
+    ivecoOnPortal2: "Driving style analysis (DSE)",
+    ivecoOnPortal3: "CO2 emission chart",
+    ivecoOnPortal4: "Daily route tracking",
+    ivecoOnPortal5: "Vehicle dashboard visualization",
+    ivecoOnAppTitle: "Easy Way App",
+    ivecoOnAppDesc: "Take your digital life on board with all the features to control your driving style.",
+    ivecoOnAccessTitle: "Access IVECO ON Portal",
+    ivecoOnAccessDesc: "Manage contracts and access exclusive features",
+    
+    // Telemetry Compare
+    telemetryCompareTitle: "Solutions Comparison",
+    telemetryCompareDesc: "Compare the features of each platform to choose the best option for your fleet.",
+    telemetryCompareFeature: "Feature",
+    compareRow1: "GPS Location",
+    compareRow2: "Fuel Consumption",
+    compareRow3: "Driving Evaluation",
+    compareRow4: "Multi-brand Support",
+    compareRow5: "OTA Updates",
+    compareRow6: "Integration API",
+    compareRow7: "Compatible Vehicles",
+    compareMultibrand: "Multi-brand",
+    compareSway: "S-WAY",
+    telemetryCompareTipTitle: "Tip",
+    telemetryCompareTip: "For mixed fleets with different brands, NexPro Connect is the ideal choice. For 100% IVECO S-WAY fleets, IVECO ON offers exclusive features.",
     
     allRightsReserved: "All rights reserved",
     print: "Print",
