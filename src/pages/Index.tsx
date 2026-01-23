@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Sidebar } from "@/components/layout/Sidebar";
+import { ToolsSidebar } from "@/components/layout/ToolsSidebar";
 import { TabNavigation } from "@/components/layout/TabNavigation";
 import { Material1Content, material1Sections } from "@/components/materials/Material1Content";
 import { Material2Content, material2Sections } from "@/components/materials/Material2Content";
@@ -46,6 +47,9 @@ const Index = () => {
         activeTab={activeTab}
         onLogoClick={() => setActiveTab("home")}
       />
+      
+      {/* Tools Sidebar - always visible */}
+      <ToolsSidebar />
       
       <div className="pt-14 sm:pt-16 flex-1 flex flex-col">
         <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />

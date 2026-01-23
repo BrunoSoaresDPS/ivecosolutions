@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
+import { MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { MessageCircle, Calculator, Link2, GraduationCap, Globe, Target } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TabNavigationProps {
   activeTab: "home" | "material1" | "material2";
@@ -8,6 +9,8 @@ interface TabNavigationProps {
 }
 
 export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
+  const { t } = useLanguage();
+
   return (
     <div className="bg-card border-b border-border sticky top-14 sm:top-16 z-40 no-print">
       <div className="flex max-w-screen-2xl mx-auto">
@@ -20,7 +23,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
           )}
         >
-          Início
+          {t.home}
         </button>
         <button
           onClick={() => onTabChange("material1")}
@@ -31,7 +34,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
           )}
         >
-          IVECO SEU
+          {t.ivecoSeu}
         </button>
         <button
           onClick={() => onTabChange("material2")}
@@ -42,54 +45,15 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
               : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
           )}
         >
-          <span className="hidden sm:inline">Cobertura de Planos</span>
+          <span className="hidden sm:inline">{t.coveragePlans}</span>
           <span className="sm:hidden">Planos</span>
         </button>
-        <Link
-          to="/qtool"
-          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
-        >
-          <Calculator className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span>QTool</span>
-        </Link>
-        <Link
-          to="/nexpro-connect"
-          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
-        >
-          <Link2 className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span className="hidden sm:inline">NexPro Connect</span>
-          <span className="sm:hidden">NexPro</span>
-        </Link>
-        <Link
-          to="/ss-training"
-          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
-        >
-          <GraduationCap className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span className="hidden sm:inline">SS Training</span>
-          <span className="sm:hidden">Training</span>
-        </Link>
-        <Link
-          to="/iveco-on"
-          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
-        >
-          <Globe className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span className="hidden sm:inline">IVECO ON</span>
-          <span className="sm:hidden">ON</span>
-        </Link>
-        <Link
-          to="/classificador-missao"
-          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
-        >
-          <Target className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span className="hidden sm:inline">Classificador de Missão</span>
-          <span className="sm:hidden">Missão</span>
-        </Link>
         <Link
           to="/tire-suas-duvidas"
           className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
         >
           <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span className="hidden sm:inline">Tire suas Dúvidas</span>
+          <span className="hidden sm:inline">{t.faq}</span>
           <span className="sm:hidden">Dúvidas</span>
         </Link>
       </div>
