@@ -11,7 +11,7 @@ interface HeaderProps {
   onSearch: (query: string) => void;
   searchQuery: string;
   onMenuToggle: () => void;
-  activeTab: "home" | "material1" | "material2";
+  activeTab: "home" | "material1" | "material2" | "telemetria";
   onLogoClick?: () => void;
 }
 
@@ -33,6 +33,8 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
         return "IVECO SEU - Software de Eficiência Único";
       case "material2":
         return t.coveragePlans;
+      case "telemetria":
+        return t.telemetryTab;
       default:
         return t.solutions;
     }
