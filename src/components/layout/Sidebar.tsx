@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface SidebarSection {
   id: string;
@@ -17,6 +18,8 @@ interface SidebarProps {
 }
 
 export function Sidebar({ sections, activeSection, onSectionClick, isOpen, onClose }: SidebarProps) {
+  const { t } = useLanguage();
+  
   return (
     <>
       {/* Overlay for mobile */}
@@ -36,7 +39,7 @@ export function Sidebar({ sections, activeSection, onSectionClick, isOpen, onClo
       >
         <div className="p-4">
           <div className="flex items-center justify-between mb-4 lg:hidden">
-            <h2 className="text-lg font-semibold text-foreground">Navegação</h2>
+            <h2 className="text-lg font-semibold text-foreground">{t.navigation}</h2>
             <Button
               variant="ghost"
               size="icon"
@@ -48,7 +51,7 @@ export function Sidebar({ sections, activeSection, onSectionClick, isOpen, onClo
           </div>
 
           <h2 className="hidden lg:block text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-            Sumário
+            {t.summary}
           </h2>
 
           <nav className="space-y-1">
