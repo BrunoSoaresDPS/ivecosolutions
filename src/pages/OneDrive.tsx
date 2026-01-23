@@ -38,7 +38,7 @@ export default function OneDrive() {
       
       {/* Full height iframe */}
       <iframe
-        src="https://ivecogroup-my.sharepoint.com/personal/thiago_radieddine_ivecogroup_com/_layouts/15/onedrive.aspx?FolderCTID=0x012000A774C570768EA4408986752FA838C59D&view=0"
+        src="https://ivecogroup-my.sharepoint.com/personal/thiago_radieddine_ivecogroup_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fthiago%5Fradieddine%5Fivecogroup%5Fcom%2FDocuments%2FService%20Solutions%20Files&viewid=b832e580%2D462d%2D4c02%2D8bf1%2Defc75e95d8ca&FolderCTID=0x012000A774C570768EA4408986752FA838C59D&view=0"
         className="flex-1 w-full border-0"
         style={{ minHeight: 0 }}
         title="One Drive"
