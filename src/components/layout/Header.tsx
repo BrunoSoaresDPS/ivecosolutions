@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import ivecoLogo from "@/assets/iveco-logo-new.png";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface HeaderProps {
   onSearch: (query: string) => void;
@@ -15,6 +17,7 @@ interface HeaderProps {
 
 export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoClick }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const { t } = useLanguage();
 
   const handlePrint = () => {
     window.print();
@@ -29,9 +32,9 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
       case "material1":
         return "IVECO SEU - Software de Eficiência Único";
       case "material2":
-        return "Cobertura de Planos de Serviços";
+        return t.coveragePlans;
       default:
-        return "Soluções e Serviços";
+        return t.solutions;
     }
   };
 
@@ -62,13 +65,16 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
         </div>
 
         <div className="flex items-center gap-1 sm:gap-2">
+          {/* Language Switcher */}
+          <LanguageSwitcher />
+
           {/* Search - Desktop */}
           <div className="hidden lg:flex items-center gap-2">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60" />
               <Input
                 type="search"
-                placeholder="Buscar no material..."
+                placeholder={t.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => onSearch(e.target.value)}
                 className="w-48 xl:w-64 pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/20 focus:border-white/40"
@@ -95,7 +101,7 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
             size="icon"
             onClick={scrollToTop}
             className="hidden sm:flex text-white hover:bg-white/10 h-8 w-8 sm:h-10 sm:w-10"
-            title="Voltar ao topo"
+            title={t.backToTop}
           >
             <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
@@ -104,7 +110,7 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
             size="icon"
             onClick={handlePrint}
             className="hidden sm:flex text-white hover:bg-white/10 h-8 w-8 sm:h-10 sm:w-10"
-            title="Imprimir seção"
+            title={t.print}
           >
             <Printer className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
@@ -118,7 +124,7 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60" />
             <Input
               type="search"
-              placeholder="Buscar no material..."
+              placeholder={t.searchPlaceholder}
               value={searchQuery}
               onChange={(e) => onSearch(e.target.value)}
               className="w-full pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/50"
