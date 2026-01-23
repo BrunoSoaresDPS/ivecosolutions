@@ -66,6 +66,26 @@ interface Translations {
   ivecoOnDescription: string;
   accessIvecoOn: string;
   
+  // Sidebar Sections - Material 1
+  sidebarIntro: string;
+  sidebarPerformance: string;
+  sidebarTechnology: string;
+  sidebarAudience: string;
+  sidebarHowItWorks: string;
+  sidebarOta: string;
+  sidebarRoi: string;
+  sidebarOffer: string;
+  
+  // Sidebar Sections - Material 2
+  sidebarIntro2: string;
+  sidebarBasicPlan: string;
+  sidebarEssentialPlan: string;
+  sidebarEconomyPlan: string;
+  sidebarPowertrainPlan: string;
+  sidebarCompletePlan: string;
+  sidebarExclusions: string;
+  sidebarTelemetry: string;
+  
   // Material 1 - IVECO SEU
   m1IntroTitle: string;
   m1Title: string;
@@ -243,6 +263,26 @@ const translations: Record<Language, Translations> = {
     otaUpdate: "Atualização OTA",
     otaUpdateDesc: "Via telemetria sem parar o veículo",
     viewDetails: "Ver detalhes completos",
+    
+    // Sidebar Sections - Material 1
+    sidebarIntro: "Introdução",
+    sidebarPerformance: "IVECO SEU Performance",
+    sidebarTechnology: "Tecnologia Exclusiva",
+    sidebarAudience: "Público-Alvo",
+    sidebarHowItWorks: "Como Funciona",
+    sidebarOta: "Tecnologia OTA",
+    sidebarRoi: "Retorno do Investimento",
+    sidebarOffer: "Oferta Especial",
+    
+    // Sidebar Sections - Material 2
+    sidebarIntro2: "Introdução",
+    sidebarBasicPlan: "Plano Básico",
+    sidebarEssentialPlan: "Plano Essencial",
+    sidebarEconomyPlan: "Plano Essencial Economy",
+    sidebarPowertrainPlan: "Plano Essencial Powertrain",
+    sidebarCompletePlan: "Plano Completo",
+    sidebarExclusions: "Exclusões do Plano Completo",
+    sidebarTelemetry: "Telemetria",
     
     coveragePlansTitle: "Cobertura de Planos de Manutenção",
     coveragePlansSubtitle: "Planos de Serviços IVECO",
@@ -457,6 +497,26 @@ const translations: Record<Language, Translations> = {
     otaUpdateDesc: "Vía telemetría sin detener el vehículo",
     viewDetails: "Ver detalles completos",
     
+    // Sidebar Sections - Material 1
+    sidebarIntro: "Introducción",
+    sidebarPerformance: "IVECO SEU Performance",
+    sidebarTechnology: "Tecnología Exclusiva",
+    sidebarAudience: "Público Objetivo",
+    sidebarHowItWorks: "Cómo Funciona",
+    sidebarOta: "Tecnología OTA",
+    sidebarRoi: "Retorno de la Inversión",
+    sidebarOffer: "Oferta Especial",
+    
+    // Sidebar Sections - Material 2
+    sidebarIntro2: "Introducción",
+    sidebarBasicPlan: "Plan Básico",
+    sidebarEssentialPlan: "Plan Esencial",
+    sidebarEconomyPlan: "Plan Esencial Economy",
+    sidebarPowertrainPlan: "Plan Esencial Powertrain",
+    sidebarCompletePlan: "Plan Completo",
+    sidebarExclusions: "Exclusiones del Plan Completo",
+    sidebarTelemetry: "Telemetría",
+    
     coveragePlansTitle: "Cobertura de Planes de Mantenimiento",
     coveragePlansSubtitle: "Planes de Servicios IVECO",
     coveragePlansDescription: "Proteja su inversión con nuestros planes de mantenimiento y cobertura. Opciones flexibles que garantizan tranquilidad y previsibilidad de costos para su operación.",
@@ -669,6 +729,26 @@ const translations: Record<Language, Translations> = {
     otaUpdate: "OTA Update",
     otaUpdateDesc: "Via telemetry without stopping the vehicle",
     viewDetails: "View full details",
+    
+    // Sidebar Sections - Material 1
+    sidebarIntro: "Introduction",
+    sidebarPerformance: "IVECO SEU Performance",
+    sidebarTechnology: "Exclusive Technology",
+    sidebarAudience: "Target Audience",
+    sidebarHowItWorks: "How It Works",
+    sidebarOta: "OTA Technology",
+    sidebarRoi: "Return on Investment",
+    sidebarOffer: "Special Offer",
+    
+    // Sidebar Sections - Material 2
+    sidebarIntro2: "Introduction",
+    sidebarBasicPlan: "Basic Plan",
+    sidebarEssentialPlan: "Essential Plan",
+    sidebarEconomyPlan: "Essential Economy Plan",
+    sidebarPowertrainPlan: "Essential Powertrain Plan",
+    sidebarCompletePlan: "Complete Plan",
+    sidebarExclusions: "Complete Plan Exclusions",
+    sidebarTelemetry: "Telemetry",
     
     coveragePlansTitle: "Maintenance Coverage Plans",
     coveragePlansSubtitle: "IVECO Service Plans",

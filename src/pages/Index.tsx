@@ -1,18 +1,43 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { ToolsSidebar } from "@/components/layout/ToolsSidebar";
 import { TabNavigation } from "@/components/layout/TabNavigation";
-import { Material1Content, material1Sections } from "@/components/materials/Material1Content";
-import { Material2Content, material2Sections } from "@/components/materials/Material2Content";
+import { Material1Content } from "@/components/materials/Material1Content";
+import { Material2Content } from "@/components/materials/Material2Content";
 import { HomeContent } from "@/components/home/HomeContent";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<"home" | "material1" | "material2">("home");
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
+
+  // Translated sidebar sections
+  const material1Sections = useMemo(() => [
+    { id: "intro", title: t.sidebarIntro },
+    { id: "performance", title: t.sidebarPerformance },
+    { id: "tecnologia", title: t.sidebarTechnology },
+    { id: "publico", title: t.sidebarAudience },
+    { id: "funcionamento", title: t.sidebarHowItWorks },
+    { id: "ota", title: t.sidebarOta },
+    { id: "retorno", title: t.sidebarRoi },
+    { id: "oferta", title: t.sidebarOffer },
+  ], [t]);
+
+  const material2Sections = useMemo(() => [
+    { id: "intro2", title: t.sidebarIntro2 },
+    { id: "basico", title: t.sidebarBasicPlan },
+    { id: "essencial", title: t.sidebarEssentialPlan },
+    { id: "economy", title: t.sidebarEconomyPlan },
+    { id: "powertrain", title: t.sidebarPowertrainPlan },
+    { id: "completo", title: t.sidebarCompletePlan },
+    { id: "exclusoes", title: t.sidebarExclusions },
+    { id: "telemetria", title: t.sidebarTelemetry },
+  ], [t]);
 
   // Reset search and section when tab changes
   useEffect(() => {
