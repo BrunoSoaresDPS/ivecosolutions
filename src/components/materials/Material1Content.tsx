@@ -4,6 +4,7 @@ import { ContentCard } from "@/components/content/ContentCard";
 import { HighlightBlock } from "@/components/content/HighlightBlock";
 import { StepCard } from "@/components/content/StepCard";
 import { FeatureList } from "@/components/content/FeatureList";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Accordion,
   AccordionContent,
@@ -40,6 +41,7 @@ export const material1Sections = [
 ];
 
 export function Material1Content({ searchQuery, onSectionVisible }: Material1ContentProps) {
+  const { t } = useLanguage();
   const [expandedSections, setExpandedSections] = useState<string[]>(["publico-accordion"]);
 
   const filteredContent = useMemo(() => {
@@ -82,56 +84,52 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
     <div className="max-w-4xl mx-auto">
       {/* Hero Section */}
       {isVisible("intro") && (
-        <Section id="intro" title="Seu Jeito de Rodar, Seu S-Way Mais Inteligente">
+        <Section id="intro" title={t.m1IntroTitle}>
           <div className="iveco-card p-8 mb-6 iveco-gradient text-primary-foreground">
-            <h3 className="text-2xl font-bold mb-4">IVECO SEU – Software de Eficiência Único</h3>
+            <h3 className="text-2xl font-bold mb-4">{t.m1Title}</h3>
             <p className="text-lg mb-6 text-primary-foreground/90">
-              O Software de Eficiência Único (SEU) é um recurso exclusivo da IVECO que ajusta a 
-              performance do S-Way com base na sua operação real.
+              {t.m1Description}
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-primary-foreground/10 rounded-lg p-4">
                 <Gauge className="h-8 w-8 mb-2" />
-                <h4 className="font-semibold mb-1">Personalização Real</h4>
+                <h4 className="font-semibold mb-1">{t.realPersonalization}</h4>
                 <p className="text-sm text-primary-foreground/80">
-                  Curva de motor ajustada conforme características da sua operação
+                  {t.realPersonalizationDesc}
                 </p>
               </div>
               <div className="bg-primary-foreground/10 rounded-lg p-4">
                 <Wifi className="h-8 w-8 mb-2" />
-                <h4 className="font-semibold mb-1">Atualização Remota (OTA)</h4>
+                <h4 className="font-semibold mb-1">{t.remoteUpdate}</h4>
                 <p className="text-sm text-primary-foreground/80">
-                  Agilidade para configurar, sem parada, sem burocracia
+                  {t.remoteUpdateDesc}
                 </p>
               </div>
               <div className="bg-primary-foreground/10 rounded-lg p-4">
                 <TrendingUp className="h-8 w-8 mb-2" />
-                <h4 className="font-semibold mb-1">Economia Comprovada</h4>
+                <h4 className="font-semibold mb-1">{t.provenSavings}</h4>
                 <p className="text-sm text-primary-foreground/80">
-                  Melhor rendimento operacional com menor consumo de combustível por km
+                  {t.provenSavingsDesc}
                 </p>
               </div>
             </div>
           </div>
 
           <HighlightBlock type="attention">
-            Tecnologia 100% desenvolvida pela IVECO. A telemetria IVECO ON analisa o uso do caminhão 
-            e sugere a melhor calibração do motor para sua realidade, gerando mais rentabilidade para a frota.
+            {t.m1AttentionNote}
           </HighlightBlock>
         </Section>
       )}
 
       {/* Performance Section */}
       {isVisible("performance") && (
-        <Section id="performance" title="IVECO SEU Performance – IVECO Sob Medida">
+        <Section id="performance" title={t.m1PerformanceTitle}>
           <ContentCard icon={<Gauge className="h-6 w-6" />}>
             <p className="mb-4">
-              A eficiência que já nasce com o IVECO S-Way ganha ainda mais potencial ao transformar 
-              os dados da sua operação em inteligência, personalizando a curva de motor de cada 
-              caminhão por meio do diagnóstico realizado a partir do IVECO ON.
+              {t.m1PerformanceDesc}
             </p>
-            <HighlightBlock type="recommendation" title="O Resultado">
-              <strong>Mais economia, mais performance, mais eficiência.</strong> O que já é bom, fica ainda melhor.
+            <HighlightBlock type="recommendation" title={t.realSavings}>
+              <strong>{t.m1PerformanceResult}</strong>
             </HighlightBlock>
           </ContentCard>
         </Section>
@@ -139,23 +137,22 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
 
       {/* Tecnologia Exclusiva */}
       {isVisible("tecnologia") && (
-        <Section id="tecnologia" title="Tecnologia Exclusiva da IVECO">
+        <Section id="tecnologia" title={t.m1TechTitle}>
           <ContentCard icon={<Zap className="h-6 w-6" />}>
             <p className="text-lg font-medium mb-4">
-              Nenhuma outra montadora oferece esse nível de personalização com atualização remota 
-              e análise baseada em dados reais de operação.
+              {t.m1TechDesc}
             </p>
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <div className="bg-secondary rounded-lg p-4">
-                <h4 className="font-semibold text-primary mb-2">+ Inovação</h4>
+                <h4 className="font-semibold text-primary mb-2">{t.innovation}</h4>
                 <p className="text-sm text-foreground/70">
-                  Tecnologia de ponta aplicada à gestão de frota
+                  {t.innovationDesc}
                 </p>
               </div>
               <div className="bg-secondary rounded-lg p-4">
-                <h4 className="font-semibold text-primary mb-2">+ Personalização</h4>
+                <h4 className="font-semibold text-primary mb-2">{t.personalization}</h4>
                 <p className="text-sm text-foreground/70">
-                  S-Way como uma solução ainda mais estratégica para a sua frota
+                  {t.personalizationDesc}
                 </p>
               </div>
             </div>
@@ -165,10 +162,9 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
 
       {/* Público-Alvo */}
       {isVisible("publico") && (
-        <Section id="publico" title="Quem é o SEU?">
+        <Section id="publico" title={t.m1AudienceTitle}>
           <p className="text-foreground/70 mb-6">
-            O SEU é especialmente indicado para operações rodoviárias, especificidades de carga 
-            e foco em custo operacional.
+            {t.m1AudienceDesc}
           </p>
 
           <Accordion type="multiple" value={expandedSections} onValueChange={setExpandedSections}>
@@ -176,19 +172,19 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
               <AccordionTrigger className="text-left">
                 <div className="flex items-center gap-3">
                   <Users className="h-5 w-5 text-primary" />
-                  <span>Perfis Indicados</span>
+                  <span>{t.indicatedProfiles}</span>
                 </div>
               </AccordionTrigger>
               <AccordionContent>
                 <div className="grid gap-4 pt-4">
-                  <ContentCard title="Frotistas e Transportadoras" icon={<Truck className="h-5 w-5" />}>
-                    <p>Empresas que querem eficiência e previsibilidade nas operações.</p>
+                  <ContentCard title={t.fleetOwners} icon={<Truck className="h-5 w-5" />}>
+                    <p>{t.fleetOwnersDesc}</p>
                   </ContentCard>
-                  <ContentCard title="Operadores Logísticos" icon={<Settings className="h-5 w-5" />}>
-                    <p>Foco em rentabilidade e otimização de custos operacionais.</p>
+                  <ContentCard title={t.logisticsOperators} icon={<Settings className="h-5 w-5" />}>
+                    <p>{t.logisticsOperatorsDesc}</p>
                   </ContentCard>
-                  <ContentCard title="Autônomos que Pensam como Empresários" icon={<Users className="h-5 w-5" />}>
-                    <p>Ideal para quem busca mais resultado sem complicação.</p>
+                  <ContentCard title={t.businessMindedOwners} icon={<Users className="h-5 w-5" />}>
+                    <p>{t.businessMindedOwnersDesc}</p>
                   </ContentCard>
                 </div>
               </AccordionContent>
@@ -199,46 +195,45 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
 
       {/* Como Funciona */}
       {isVisible("funcionamento") && (
-        <Section id="funcionamento" title="Como Funciona?">
+        <Section id="funcionamento" title={t.m1HowItWorksTitle}>
           <p className="text-foreground/70 mb-6">
-            Conte com a consultoria do nosso time de especialistas para acompanhamento da 
-            performance do seu caminhão.
+            {t.m1HowItWorksDesc}
           </p>
 
           <div className="space-y-4">
             <StepCard
               number={1}
-              title="Coleta de Dados"
-              description="Coleta de dados via IVECO ON por 30 dias de operação"
+              title={t.step1Title}
+              description={t.step1Desc}
             />
             <StepCard
               number={2}
-              title="Análise Especializada"
-              description="Análise da IVECO sobre uso, carga, rota e topografia"
+              title={t.step2Title}
+              description={t.step2Desc}
             />
             <StepCard
               number={3}
-              title="Parametrização Personalizada"
-              description="Parametrização personalizada do veículo conforme sua operação"
+              title={t.step3Title}
+              description={t.step3Desc}
             />
             <StepCard
               number={4}
-              title="Atualização Remota"
-              description="Atualização remota via OTA, sem necessidade de parada"
+              title={t.step4Title}
+              description={t.step4Desc}
             />
             <StepCard
               number={5}
-              title="Resultado Direto"
-              description="Mais economia e performance ajustada à operação"
+              title={t.step5Title}
+              description={t.step5Desc}
             />
           </div>
 
           <div className="mt-8 grid md:grid-cols-2 gap-4">
-            <ContentCard title="Relatórios Técnicos">
-              <p>Entrega de relatórios técnicos com comparativos antes e depois do IVECO SEU.</p>
+            <ContentCard title={t.technicalReports}>
+              <p>{t.technicalReportsDesc}</p>
             </ContentCard>
-            <ContentCard title="Orientações Práticas">
-              <p>Orientações práticas de condução para evolução dos indicadores.</p>
+            <ContentCard title={t.practicalGuidelines}>
+              <p>{t.practicalGuidelinesDesc}</p>
             </ContentCard>
           </div>
         </Section>
@@ -246,17 +241,16 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
 
       {/* Tecnologia OTA */}
       {isVisible("ota") && (
-        <Section id="ota" title="Tecnologia OTA – Eficiência Sem Interrupção">
+        <Section id="ota" title={t.m1OtaTitle}>
           <ContentCard icon={<Wifi className="h-6 w-6" />}>
             <HighlightBlock type="attention">
-              O cliente não precisa parar o caminhão para se beneficiar do SEU.
+              {t.m1OtaAttention}
             </HighlightBlock>
             <p className="mt-4">
-              A atualização é feita remotamente por OTA (Over The Air), com segurança e agilidade. 
-              Enquanto a operação roda, a tecnologia trabalha para otimizar.
+              {t.m1OtaDesc}
             </p>
             <HighlightBlock type="recommendation">
-              É o máximo de eficiência com o mínimo de intervenção.
+              {t.m1OtaRecommendation}
             </HighlightBlock>
           </ContentCard>
         </Section>
@@ -264,31 +258,23 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
 
       {/* Retorno do Investimento */}
       {isVisible("retorno") && (
-        <Section id="retorno" title="Por que Apostar no IVECO SEU?">
+        <Section id="retorno" title={t.m1RoiTitle}>
           <div className="iveco-card p-6 bg-secondary mb-6">
             <div className="flex items-center gap-4 mb-4">
               <PiggyBank className="h-10 w-10 text-primary" />
               <div>
-                <h3 className="text-xl font-bold text-primary">Retorno do Investimento</h3>
-                <p className="text-lg text-primary">Em aproximadamente 3 meses</p>
+                <h3 className="text-xl font-bold text-primary">{t.roiLabel}</h3>
+                <p className="text-lg text-primary">{t.roiTime}</p>
               </div>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <ContentCard title="Economia Real" icon={<TrendingUp className="h-5 w-5" />}>
-              <FeatureList items={[
-                "Economia real de combustível",
-                "Aumento da vida útil do caminhão",
-                "Menor desgaste e mais previsibilidade",
-              ]} />
+            <ContentCard title={t.realSavings} icon={<TrendingUp className="h-5 w-5" />}>
+              <FeatureList items={t.realSavingsItems} />
             </ContentCard>
-            <ContentCard title="Vantagens Exclusivas" icon={<Leaf className="h-5 w-5" />}>
-              <FeatureList items={[
-                "Solução integrada à conectividade IVECO ON",
-                "Sustentabilidade comprovada: menos consumo, menor impacto ambiental",
-                "Caminhão personalizado, sem perder garantia e sem parar",
-              ]} />
+            <ContentCard title={t.exclusiveAdvantages} icon={<Leaf className="h-5 w-5" />}>
+              <FeatureList items={t.exclusiveAdvantagesItems} />
             </ContentCard>
           </div>
         </Section>
@@ -296,26 +282,25 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
 
       {/* Oferta Especial */}
       {isVisible("oferta") && (
-        <Section id="oferta" title="Oferta Especial">
+        <Section id="oferta" title={t.m1OfferTitle}>
           <ContentCard icon={<BadgePercent className="h-6 w-6" />}>
-            <HighlightBlock type="rule" title="Condição Comercial">
-              <p className="font-medium">20% da economia entregue, multiplicado pelo fator 18.</p>
+            <HighlightBlock type="rule" title={t.commercialCondition}>
+              <p className="font-medium">{t.commercialConditionDesc}</p>
             </HighlightBlock>
             <div className="mt-6 p-4 bg-secondary rounded-lg">
-              <h4 className="font-semibold text-primary mb-2">Simulador Payback</h4>
+              <h4 className="font-semibold text-primary mb-2">{t.paybackSimulator}</h4>
               <p className="text-sm text-foreground/70">
-                Utilize o simulador IVECO para calcular o retorno do investimento 
-                baseado na sua operação específica.
+                {t.paybackSimulatorDesc}
               </p>
             </div>
           </ContentCard>
 
           <div className="mt-8 iveco-card p-8 iveco-gradient text-primary-foreground text-center">
             <h3 className="text-2xl font-bold mb-4">
-              A gente entende o seu caminho e segue com você.
+              {t.m1FinalMessage}
             </h3>
             <p className="text-lg text-primary-foreground/90">
-              Descubra como o IVECO SEU pode elevar a performance do S-Way e gerar resultados reais.
+              {t.m1FinalDescription}
             </p>
           </div>
         </Section>
@@ -324,7 +309,7 @@ export function Material1Content({ searchQuery, onSectionVisible }: Material1Con
       {searchQuery && !filteredContent && (
         <div className="text-center py-12">
           <p className="text-muted-foreground">
-            Nenhum resultado encontrado para "{searchQuery}"
+            {t.noResultsFound} "{searchQuery}"
           </p>
         </div>
       )}
