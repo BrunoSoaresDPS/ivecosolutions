@@ -11,6 +11,8 @@ interface Translations {
   home: string;
   ivecoSeu: string;
   coveragePlans: string;
+  oneDrive: string;
+  oneDriveDescription: string;
   faq: string;
   
   // Tools Sidebar
@@ -211,6 +213,8 @@ const translations: Record<Language, Translations> = {
     home: "Início",
     ivecoSeu: "IVECO SEU",
     coveragePlans: "Cobertura de Planos",
+    oneDrive: "One Drive",
+    oneDriveDescription: "Acesse arquivos e documentos compartilhados",
     faq: "Tire suas Dúvidas",
     tools: "Ferramentas",
     qtool: "QTool",
@@ -420,6 +424,8 @@ const translations: Record<Language, Translations> = {
     home: "Inicio",
     ivecoSeu: "IVECO SEU",
     coveragePlans: "Cobertura de Planes",
+    oneDrive: "One Drive",
+    oneDriveDescription: "Acceda a archivos y documentos compartidos",
     faq: "Preguntas Frecuentes",
     tools: "Herramientas",
     qtool: "QTool",
@@ -629,6 +635,8 @@ const translations: Record<Language, Translations> = {
     home: "Home",
     ivecoSeu: "IVECO SEU",
     coveragePlans: "Coverage Plans",
+    oneDrive: "One Drive",
+    oneDriveDescription: "Access shared files and documents",
     faq: "FAQ",
     tools: "Tools",
     qtool: "QTool",
