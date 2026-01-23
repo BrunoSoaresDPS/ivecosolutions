@@ -1,6 +1,7 @@
 import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle, Calculator, Link2, GraduationCap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import ivecoSeuHeader from "@/assets/iveco-seu-header.jpg";
 import coberturaPlanosHeader from "@/assets/cobertura-planos-header.webp";
 
@@ -9,6 +10,8 @@ interface HomeContentProps {
 }
 
 export function HomeContent({ onNavigate }: HomeContentProps) {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-[calc(100vh-12rem)] flex flex-col">
       {/* Hero Section with Video Background */}
@@ -29,15 +32,15 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
         
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 drop-shadow-lg">
-            Soluções e Serviços IVECO
+            {t.welcomeTitle}
           </h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto px-2 drop-shadow-md mb-6">
-            Conheça nossas soluções exclusivas para maximizar a eficiência e proteger seu investimento
+            {t.heroDescription}
           </p>
           <Link to="/tire-suas-duvidas">
             <Button variant="outline" className="gap-2 bg-white/10 border-white/30 text-white hover:bg-white/20">
               <MessageCircle className="h-4 w-4" />
-              Tire suas Dúvidas
+              {t.askQuestions}
             </Button>
           </Link>
         </div>
@@ -59,34 +62,34 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                   <div className="p-2 sm:p-3 bg-primary rounded-lg">
                     <Cpu className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
                   </div>
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">IVECO SEU</h2>
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{t.ivecoSeuTitle}</h2>
                 </div>
-                <p className="text-sm sm:text-base text-white/80">Software de Eficiência Único</p>
+                <p className="text-sm sm:text-base text-white/80">{t.ivecoSeuSubtitle}</p>
               </div>
             </div>
             
             <div className="p-4 sm:p-6">
               <p className="text-sm sm:text-base text-foreground mb-4 sm:mb-6">
-                Tecnologia exclusiva IVECO que otimiza a performance do seu caminhão através de reprogramação inteligente da ECU, proporcionando economia de combustível e aumento de potência.
+                {t.ivecoSeuDescription}
               </p>
               
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Gauge className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-xs sm:text-sm text-muted-foreground">
-                    <strong className="text-foreground">+30cv de potência</strong> - Ganho real de performance
+                    <strong className="text-foreground">{t.powerGain}</strong> - {t.powerGainDesc}
                   </span>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Truck className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-xs sm:text-sm text-muted-foreground">
-                    <strong className="text-foreground">Até 3% de economia</strong> - Redução no consumo de combustível
+                    <strong className="text-foreground">{t.fuelSavings}</strong> - {t.fuelSavingsDesc}
                   </span>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Settings className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-xs sm:text-sm text-muted-foreground">
-                    <strong className="text-foreground">Atualização OTA</strong> - Via telemetria sem parar o veículo
+                    <strong className="text-foreground">{t.otaUpdate}</strong> - {t.otaUpdateDesc}
                   </span>
                 </div>
               </div>
@@ -95,7 +98,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                 onClick={() => onNavigate("material1")}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base"
               >
-                Ver detalhes completos
+                {t.viewDetails}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -113,34 +116,34 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                   <div className="p-2 sm:p-3 bg-primary rounded-lg">
                     <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
                   </div>
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">Cobertura de Planos de Manutenção</h2>
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{t.coveragePlansTitle}</h2>
                 </div>
-                <p className="text-sm sm:text-base text-white/80">Planos de Serviços IVECO</p>
+                <p className="text-sm sm:text-base text-white/80">{t.coveragePlansSubtitle}</p>
               </div>
             </div>
             
             <div className="p-4 sm:p-6">
               <p className="text-sm sm:text-base text-foreground mb-4 sm:mb-6">
-                Proteja seu investimento com nossos planos de manutenção e cobertura. Opções flexíveis que garantem tranquilidade e previsibilidade de custos para sua operação.
+                {t.coveragePlansDescription}
               </p>
               
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                 <div className="flex items-start gap-2 sm:gap-3">
                   <FileCheck className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-xs sm:text-sm text-muted-foreground">
-                    <strong className="text-foreground">5 opções de planos</strong> - Do Básico ao Completo
+                    <strong className="text-foreground">{t.planOptions}</strong> - {t.planOptionsDesc}
                   </span>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-xs sm:text-sm text-muted-foreground">
-                    <strong className="text-foreground">Cobertura abrangente</strong> - Motor, câmbio, eixos e mais
+                    <strong className="text-foreground">{t.comprehensiveCoverage}</strong> - {t.comprehensiveCoverageDesc}
                   </span>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Truck className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-xs sm:text-sm text-muted-foreground">
-                    <strong className="text-foreground">Telemetria incluída</strong> - IVECO ON e NEXPRO CONNECT
+                    <strong className="text-foreground">{t.telemetryIncluded}</strong> - {t.telemetryIncludedDesc}
                   </span>
                 </div>
               </div>
@@ -149,7 +152,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                 onClick={() => onNavigate("material2")}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base"
               >
-                Ver detalhes completos
+                {t.viewDetails}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -159,7 +162,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
         {/* Tools & Resources Grid */}
         <div className="max-w-6xl mx-auto mt-6 sm:mt-8 md:mt-12">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 text-center">
-            Ferramentas e Recursos
+            {t.toolsResources}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             
@@ -171,15 +174,15 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                     <div className="p-2 bg-primary rounded-lg">
                       <Calculator className="h-5 w-5 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground">QTool</h3>
+                    <h3 className="text-lg font-bold text-foreground">{t.qtool}</h3>
                   </div>
                 </div>
                 <div className="p-4 sm:p-5">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Ferramenta de cotação e cálculos para serviços IVECO. Acesse rapidamente informações de preços e simulações.
+                    {t.qtoolDescription}
                   </p>
                   <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
-                    Acessar QTool
+                    {t.accessQtool}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
                 </div>
@@ -194,15 +197,15 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                     <div className="p-2 bg-primary rounded-lg">
                       <Link2 className="h-5 w-5 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground">NexPro Connect</h3>
+                    <h3 className="text-lg font-bold text-foreground">{t.nexproConnect}</h3>
                   </div>
                 </div>
                 <div className="p-4 sm:p-5">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Plataforma de conectividade e telemetria IVECO. Monitore sua frota em tempo real e otimize operações.
+                    {t.nexproDescription}
                   </p>
                   <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
-                    Acessar NexPro
+                    {t.accessNexpro}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
                 </div>
@@ -217,15 +220,15 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                     <div className="p-2 bg-primary rounded-lg">
                       <GraduationCap className="h-5 w-5 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground">SS Training</h3>
+                    <h3 className="text-lg font-bold text-foreground">{t.ssTraining}</h3>
                   </div>
                 </div>
                 <div className="p-4 sm:p-5">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Plataforma de treinamentos e capacitação. Acesse cursos e materiais para aprimorar seus conhecimentos.
+                    {t.ssTrainingDescription}
                   </p>
                   <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
-                    Acessar Training
+                    {t.accessTraining}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
                 </div>
@@ -240,15 +243,15 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
                     <div className="p-2 bg-primary rounded-lg">
                       <Globe className="h-5 w-5 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground">IVECO ON</h3>
+                    <h3 className="text-lg font-bold text-foreground">{t.ivecoOn}</h3>
                   </div>
                 </div>
                 <div className="p-4 sm:p-5">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Portal de contratos e serviços conectados IVECO. Gerencie seus contratos e acesse funcionalidades exclusivas.
+                    {t.ivecoOnDescription}
                   </p>
                   <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
-                    Acessar IVECO ON
+                    {t.accessIvecoOn}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
                 </div>
@@ -261,14 +264,14 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
         {/* Quick Info */}
         <div className="max-w-6xl mx-auto mt-6 sm:mt-8 md:mt-12 text-center px-2">
           <p className="text-muted-foreground text-xs sm:text-sm mb-6">
-            Selecione uma das soluções acima para ver o conteúdo completo e detalhado
+            {t.selectSolution}
           </p>
           
           {/* FAQ/Chatbot Link */}
           <Link to="/tire-suas-duvidas">
             <Button variant="outline" className="gap-2">
               <MessageCircle className="h-4 w-4" />
-              Tire suas Dúvidas
+              {t.askQuestions}
             </Button>
           </Link>
         </div>
