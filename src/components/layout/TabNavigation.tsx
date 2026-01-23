@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -48,6 +48,13 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
           <span className="hidden sm:inline">{t.coveragePlans}</span>
           <span className="sm:hidden">Planos</span>
         </button>
+        <Link
+          to="/onedrive"
+          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
+        >
+          <Cloud className="h-3 w-3 sm:h-4 sm:w-4" />
+          <span>{t.oneDrive}</span>
+        </Link>
         <Link
           to="/tire-suas-duvidas"
           className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
