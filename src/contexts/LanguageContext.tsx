@@ -13,6 +13,8 @@ interface Translations {
   coveragePlans: string;
   oneDrive: string;
   oneDriveDescription: string;
+  oneDriveSecurityNote: string;
+  openOneDrive: string;
   faq: string;
   
   // Tools Sidebar
@@ -215,6 +217,8 @@ const translations: Record<Language, Translations> = {
     coveragePlans: "Cobertura de Planos",
     oneDrive: "One Drive",
     oneDriveDescription: "Acesse arquivos e documentos compartilhados",
+    oneDriveSecurityNote: "Por razões de segurança, o OneDrive será aberto em uma nova aba do navegador.",
+    openOneDrive: "Abrir OneDrive",
     faq: "Tire suas Dúvidas",
     tools: "Ferramentas",
     qtool: "QTool",
@@ -426,6 +430,8 @@ const translations: Record<Language, Translations> = {
     coveragePlans: "Cobertura de Planes",
     oneDrive: "One Drive",
     oneDriveDescription: "Acceda a archivos y documentos compartidos",
+    oneDriveSecurityNote: "Por razones de seguridad, OneDrive se abrirá en una nueva pestaña del navegador.",
+    openOneDrive: "Abrir OneDrive",
     faq: "Preguntas Frecuentes",
     tools: "Herramientas",
     qtool: "QTool",
@@ -637,6 +643,8 @@ const translations: Record<Language, Translations> = {
     coveragePlans: "Coverage Plans",
     oneDrive: "One Drive",
     oneDriveDescription: "Access shared files and documents",
+    oneDriveSecurityNote: "For security reasons, OneDrive will open in a new browser tab.",
+    openOneDrive: "Open OneDrive",
     faq: "FAQ",
     tools: "Tools",
     qtool: "QTool",
