@@ -54,8 +54,8 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
           {/* IVECO SEU Card */}
           <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div 
-              className="relative p-4 sm:p-6 border-b border-border bg-cover"
-              style={{ backgroundImage: `url(${ivecoSeuHeader})`, backgroundPosition: 'center 70%' }}
+              className="relative p-4 sm:p-6 border-b border-border h-32 sm:h-36"
+              style={{ backgroundImage: `url(${ivecoSeuHeader})`, backgroundPosition: 'center 70%', backgroundSize: 'cover' }}
             >
               <div className="absolute inset-0 bg-black/40" />
               <div className="relative z-10">
@@ -108,8 +108,8 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
           {/* Cobertura de Planos Card */}
           <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div 
-              className="relative p-4 sm:p-6 border-b border-border"
-              style={{ backgroundImage: `url(${coberturaPlanosHeader})`, backgroundPosition: 'center 40%', backgroundSize: '80%' }}
+              className="relative p-4 sm:p-6 border-b border-border h-32 sm:h-36"
+              style={{ backgroundImage: `url(${coberturaPlanosHeader})`, backgroundPosition: 'center 40%', backgroundSize: 'cover' }}
             >
               <div className="absolute inset-0 bg-black/40" />
               <div className="relative z-10">
@@ -162,8 +162,8 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
           {/* Telemetria Card */}
           <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div 
-              className="relative p-4 sm:p-6 border-b border-border bg-cover"
-              style={{ backgroundImage: `url(${telemetriaHeader})`, backgroundPosition: 'center 30%' }}
+              className="relative p-4 sm:p-6 border-b border-border h-32 sm:h-36"
+              style={{ backgroundImage: `url(${telemetriaHeader})`, backgroundPosition: 'center 15%', backgroundSize: 'cover' }}
             >
               <div className="absolute inset-0 bg-black/40" />
               <div className="relative z-10">
