@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Calculator, Link2, GraduationCap, Globe, Target, ChevronRight } from "lucide-react";
+import { Calculator, Link2, GraduationCap, Globe, Target, ChevronRight, Cloud, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const tools = [
@@ -10,6 +10,8 @@ const tools = [
   { id: "training", path: "/ss-training", icon: GraduationCap, labelKey: "ssTraining" as const },
   { id: "iveco-on", path: "/iveco-on", icon: Globe, labelKey: "ivecoOn" as const },
   { id: "mission", path: "/classificador-missao", icon: Target, labelKey: "missionClassifier" as const },
+  { id: "onedrive", path: "/onedrive", icon: Cloud, labelKey: "oneDrive" as const },
+  { id: "faq", path: "/tire-suas-duvidas", icon: MessageCircle, labelKey: "faq" as const },
 ];
 
 export function ToolsSidebar() {

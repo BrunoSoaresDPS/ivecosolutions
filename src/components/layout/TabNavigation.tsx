@@ -1,11 +1,10 @@
 import { cn } from "@/lib/utils";
-import { MessageCircle, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Wifi } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TabNavigationProps {
-  activeTab: "home" | "material1" | "material2";
-  onTabChange: (tab: "home" | "material1" | "material2") => void;
+  activeTab: "home" | "material1" | "material2" | "telemetria";
+  onTabChange: (tab: "home" | "material1" | "material2" | "telemetria") => void;
 }
 
 export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
@@ -37,21 +36,18 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
           <span className="hidden sm:inline">{t.coveragePlans}</span>
           <span className="sm:hidden">Planos</span>
         </button>
-        <Link
-          to="/onedrive"
-          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
+        <button
+          onClick={() => onTabChange("telemetria")}
+          className={cn(
+            "flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 flex items-center justify-center gap-1",
+            activeTab === "telemetria"
+              ? "text-primary border-primary bg-secondary/50"
+              : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
+          )}
         >
-          <Cloud className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span>{t.oneDrive}</span>
-        </Link>
-        <Link
-          to="/tire-suas-duvidas"
-          className="flex-1 py-3 sm:py-4 px-2 sm:px-6 text-xs sm:text-sm font-medium transition-all duration-200 border-b-2 text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50 flex items-center justify-center gap-1"
-        >
-          <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span className="hidden sm:inline">{t.faq}</span>
-          <span className="sm:hidden">Dúvidas</span>
-        </Link>
+          <Wifi className="h-3 w-3 sm:h-4 sm:w-4" />
+          <span>{t.telemetryTab}</span>
+        </button>
       </div>
     </div>
   );
