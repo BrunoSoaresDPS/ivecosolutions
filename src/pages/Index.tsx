@@ -82,7 +82,7 @@ const Index = () => {
         {activeTab === "home" ? (
           <HomeContent onNavigate={setActiveTab} />
         ) : (
-          <div className="flex flex-1">
+          <div className="flex flex-1 lg:ml-14">
             <Sidebar
               sections={currentSections}
               activeSection={activeSection}
