@@ -11,7 +11,7 @@ interface HeaderProps {
   onSearch: (query: string) => void;
   searchQuery: string;
   onMenuToggle: () => void;
-  activeTab: "home" | "material1" | "material2" | "telemetria";
+  activeTab: "home" | "material1" | "material2" | "telemetria" | "rental";
   onLogoClick?: () => void;
 }
 
@@ -35,6 +35,8 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
         return t.coveragePlans;
       case "telemetria":
         return t.telemetryTab;
+      case "rental":
+        return t.rentalTab;
       default:
         return t.solutions;
     }
