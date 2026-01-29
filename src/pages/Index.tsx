@@ -7,12 +7,13 @@ import { TabNavigation } from "@/components/layout/TabNavigation";
 import { Material1Content } from "@/components/materials/Material1Content";
 import { Material2Content } from "@/components/materials/Material2Content";
 import { TelemetriaContent } from "@/components/materials/TelemetriaContent";
+import { RentalContent } from "@/components/materials/RentalContent";
 import { HomeContent } from "@/components/home/HomeContent";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
   const { t } = useLanguage();
-  const [activeTab, setActiveTab] = useState<"home" | "material1" | "material2" | "telemetria">("home");
+  const [activeTab, setActiveTab] = useState<"home" | "material1" | "material2" | "telemetria" | "rental">("home");
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
@@ -47,6 +48,13 @@ const Index = () => {
     { id: "comparativo", title: t.sidebarComparativo },
   ], [t]);
 
+  const rentalSections = useMemo(() => [
+    { id: "intro-rental", title: t.sidebarRentalIntro },
+    { id: "pacotes-rental", title: t.sidebarRentalPackages },
+    { id: "termos-rental", title: t.sidebarRentalTerms },
+    { id: "contato-rental", title: t.sidebarRentalContact },
+  ], [t]);
+
   // Reset search and section when tab changes
   useEffect(() => {
     setSearchQuery("");
@@ -56,6 +64,8 @@ const Index = () => {
       setActiveSection("intro2");
     } else if (activeTab === "telemetria") {
       setActiveSection("intro-telemetria");
+    } else if (activeTab === "rental") {
+      setActiveSection("intro-rental");
     }
   }, [activeTab]);
 
@@ -75,7 +85,9 @@ const Index = () => {
     ? material1Sections 
     : activeTab === "material2" 
       ? material2Sections 
-      : telemetriaSections;
+      : activeTab === "rental"
+        ? rentalSections
+        : telemetriaSections;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -114,6 +126,11 @@ const Index = () => {
                   />
                 ) : activeTab === "material2" ? (
                   <Material2Content 
+                    searchQuery={searchQuery}
+                    onSectionVisible={setActiveSection}
+                  />
+                ) : activeTab === "rental" ? (
+                  <RentalContent 
                     searchQuery={searchQuery}
                     onSectionVisible={setActiveSection}
                   />

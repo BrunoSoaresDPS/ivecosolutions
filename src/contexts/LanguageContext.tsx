@@ -17,6 +17,7 @@ interface Translations {
   openOneDrive: string;
   faq: string;
   telemetryTab: string;
+  rentalTab: string;
   
   // Tools Sidebar
   tools: string;
@@ -103,6 +104,65 @@ interface Translations {
   sidebarNexpro: string;
   sidebarIvecoOn: string;
   sidebarComparativo: string;
+  
+  // Sidebar Sections - Rental
+  sidebarRentalIntro: string;
+  sidebarRentalPackages: string;
+  sidebarRentalTerms: string;
+  sidebarRentalContact: string;
+  
+  // Rental Content
+  rentalSubtitle: string;
+  rentalIntroTitle: string;
+  rentalIntroDesc: string;
+  rentalIntroDesc2: string;
+  rentalAdvantagesTitle: string;
+  rentalAdvantagesList: string[];
+  rentalPackagesTitle: string;
+  rentalPackagesDesc: string;
+  rentalService: string;
+  rentalEssentialPlan: string;
+  rentalPremiumPlan: string;
+  rentalVehicleRental: string;
+  rentalPreventiveMaintenance: string;
+  rentalSupport0800: string;
+  rentalTraining: string;
+  rentalFineManagement: string;
+  rentalLicenseIPVA: string;
+  rentalTelemetry: string;
+  rentalCorrectiveMaintenance: string;
+  rentalRoadside24h: string;
+  rentalTermsTitle: string;
+  rentalUsagePolicyTitle: string;
+  rentalUsagePolicyDesc: string;
+  rentalContractProcedureTitle: string;
+  rentalAdhesionProcess: string;
+  rentalAdhesionProcessDesc: string;
+  rentalDeliveryTime: string;
+  rentalDeliveryTimeDesc: string;
+  rentalInsurance: string;
+  rentalInsuranceDesc: string;
+  rentalTires: string;
+  rentalTiresDesc: string;
+  rentalPickupLocation: string;
+  rentalPickupLocationDesc: string;
+  rentalProposalValidity: string;
+  rentalContactTitle: string;
+  rentalCommercialExecutive: string;
+  rentalOperationalAnalyst: string;
+  rentalCallCenter: string;
+  rentalFinalMessage: string;
+  
+  // Rental Card (Home)
+  rentalCardTitle: string;
+  rentalCardSubtitle: string;
+  rentalCardDescription: string;
+  rentalCardFeature1: string;
+  rentalCardFeature1Desc: string;
+  rentalCardFeature2: string;
+  rentalCardFeature2Desc: string;
+  rentalCardFeature3: string;
+  rentalCardFeature3Desc: string;
   
   // Telemetria Content
   telemetryIntroTitle: string;
@@ -649,6 +709,62 @@ const translations: Record<Language, Translations> = {
     backToTop: "Voltar ao topo",
     navigation: "Navegação",
     summary: "Sumário",
+    
+    // Rental
+    rentalTab: "Rental",
+    sidebarRentalIntro: "Introdução",
+    sidebarRentalPackages: "Pacotes",
+    sidebarRentalTerms: "Termos e Condições",
+    sidebarRentalContact: "Contato",
+    rentalSubtitle: "A solução de locação completa",
+    rentalIntroTitle: "Sobre o IVECO Rental",
+    rentalIntroDesc: "No Brasil, desde 1997, a IVECO é uma líder global no mercado de veículos comerciais. Nossa missão é oferecer soluções inovadoras e sustentáveis que atendam às necessidades de transporte dos nossos clientes, e o IVECO Rental é uma delas.",
+    rentalIntroDesc2: "Criada para dar mais flexibilidade e excelência para empresas de todos os tamanhos e segmentos, o IVECO Rental garante uma frota moderna e sempre em boas condições, sem os desafios de propriedade ou preocupações com manutenção.",
+    rentalAdvantagesTitle: "Vantagens da locação de veículos IVECO",
+    rentalAdvantagesList: ["Flexibilidade", "Redução de custos", "Manutenção inclusa", "Frota atualizada", "Benefícios fiscais e sustentabilidade", "Ponto focal direto com a fábrica"],
+    rentalPackagesTitle: "Pacotes IVECO Rental",
+    rentalPackagesDesc: "Escolher a locação de veículos IVECO traz inúmeras vantagens para a sua empresa:",
+    rentalService: "Serviço",
+    rentalEssentialPlan: "Plano Essencial",
+    rentalPremiumPlan: "Plano Premium",
+    rentalVehicleRental: "Locação do Veículo",
+    rentalPreventiveMaintenance: "Manutenção Preventiva",
+    rentalSupport0800: "Suporte 0800",
+    rentalTraining: "Treinamento e Entrega Técnica",
+    rentalFineManagement: "Gestão de Multas",
+    rentalLicenseIPVA: "Emplacamento e IPVA",
+    rentalTelemetry: "Serviços de Telemetria",
+    rentalCorrectiveMaintenance: "Manutenção Corretiva",
+    rentalRoadside24h: "Socorro 24 Horas",
+    rentalTermsTitle: "Termos e Condições Gerais",
+    rentalUsagePolicyTitle: "Política de Uso e Manutenção",
+    rentalUsagePolicyDesc: "Os veículos devem ser utilizados conforme especificações do fabricante e as manutenções serão realizadas pela IVECO em território NACIONAL. Os períodos de manutenções informados na proposta são considerados rodoviários (caso a operação seja específica, deve ser informado e realizado uma nova proposta).",
+    rentalContractProcedureTitle: "Procedimentos para Contratação",
+    rentalAdhesionProcess: "Processo de Adesão",
+    rentalAdhesionProcessDesc: "Simples e ágil, com suporte completo da nossa equipe.",
+    rentalDeliveryTime: "Prazo para Entrega dos Veículos",
+    rentalDeliveryTimeDesc: "Entrega dos veículos seguem conforme disponibilidade em estoque.",
+    rentalInsurance: "Seguro e Responsabilidades",
+    rentalInsuranceDesc: "A cargo do cliente.",
+    rentalTires: "Pneus",
+    rentalTiresDesc: "Não incluso na proposta.",
+    rentalPickupLocation: "Local de Retirada",
+    rentalPickupLocationDesc: "Betim",
+    rentalProposalValidity: "Proposta válida por 10 dias.",
+    rentalContactTitle: "Contato",
+    rentalCommercialExecutive: "Executivo Comercial - Rental",
+    rentalOperationalAnalyst: "Analista Gestão Operacional - Rental",
+    rentalCallCenter: "Central de Atendimento",
+    rentalFinalMessage: "A eficiência da IVECO à disposição do seu negócio!",
+    rentalCardTitle: "IVECO Rental",
+    rentalCardSubtitle: "Solução de Locação",
+    rentalCardDescription: "Locação flexível para suas necessidades de transporte. Frota moderna sem os desafios de propriedade e manutenção.",
+    rentalCardFeature1: "Flexibilidade",
+    rentalCardFeature1Desc: "Adapte sua frota à demanda",
+    rentalCardFeature2: "Manutenção Inclusa",
+    rentalCardFeature2Desc: "Sem preocupações extras",
+    rentalCardFeature3: "Frota Atualizada",
+    rentalCardFeature3Desc: "Veículos modernos sempre",
   },
   es: {
     searchPlaceholder: "Buscar en el material...",
@@ -976,6 +1092,62 @@ const translations: Record<Language, Translations> = {
     backToTop: "Volver arriba",
     navigation: "Navegación",
     summary: "Resumen",
+    
+    // Rental
+    rentalTab: "Rental",
+    sidebarRentalIntro: "Introducción",
+    sidebarRentalPackages: "Paquetes",
+    sidebarRentalTerms: "Términos y Condiciones",
+    sidebarRentalContact: "Contacto",
+    rentalSubtitle: "La solución de alquiler completa",
+    rentalIntroTitle: "Sobre IVECO Rental",
+    rentalIntroDesc: "En Brasil, desde 1997, IVECO es líder global en el mercado de vehículos comerciales. Nuestra misión es ofrecer soluciones innovadoras y sostenibles que atiendan las necesidades de transporte de nuestros clientes, e IVECO Rental es una de ellas.",
+    rentalIntroDesc2: "Creada para dar más flexibilidad y excelencia a empresas de todos los tamaños y segmentos, IVECO Rental garantiza una flota moderna y siempre en buenas condiciones, sin los desafíos de propiedad o preocupaciones con mantenimiento.",
+    rentalAdvantagesTitle: "Ventajas del alquiler de vehículos IVECO",
+    rentalAdvantagesList: ["Flexibilidad", "Reducción de costos", "Mantenimiento incluido", "Flota actualizada", "Beneficios fiscales y sostenibilidad", "Punto focal directo con la fábrica"],
+    rentalPackagesTitle: "Paquetes IVECO Rental",
+    rentalPackagesDesc: "Elegir el alquiler de vehículos IVECO trae numerosas ventajas para su empresa:",
+    rentalService: "Servicio",
+    rentalEssentialPlan: "Plan Esencial",
+    rentalPremiumPlan: "Plan Premium",
+    rentalVehicleRental: "Alquiler del Vehículo",
+    rentalPreventiveMaintenance: "Mantenimiento Preventivo",
+    rentalSupport0800: "Soporte 0800",
+    rentalTraining: "Capacitación y Entrega Técnica",
+    rentalFineManagement: "Gestión de Multas",
+    rentalLicenseIPVA: "Patentamiento e IPVA",
+    rentalTelemetry: "Servicios de Telemetría",
+    rentalCorrectiveMaintenance: "Mantenimiento Correctivo",
+    rentalRoadside24h: "Asistencia 24 Horas",
+    rentalTermsTitle: "Términos y Condiciones Generales",
+    rentalUsagePolicyTitle: "Política de Uso y Mantenimiento",
+    rentalUsagePolicyDesc: "Los vehículos deben utilizarse según especificaciones del fabricante y los mantenimientos serán realizados por IVECO en territorio NACIONAL. Los períodos de mantenimiento informados en la propuesta son considerados de carretera.",
+    rentalContractProcedureTitle: "Procedimientos para Contratación",
+    rentalAdhesionProcess: "Proceso de Adhesión",
+    rentalAdhesionProcessDesc: "Simple y ágil, con soporte completo de nuestro equipo.",
+    rentalDeliveryTime: "Plazo de Entrega de Vehículos",
+    rentalDeliveryTimeDesc: "La entrega de vehículos sigue según disponibilidad en stock.",
+    rentalInsurance: "Seguro y Responsabilidades",
+    rentalInsuranceDesc: "A cargo del cliente.",
+    rentalTires: "Neumáticos",
+    rentalTiresDesc: "No incluido en la propuesta.",
+    rentalPickupLocation: "Lugar de Retiro",
+    rentalPickupLocationDesc: "Betim",
+    rentalProposalValidity: "Propuesta válida por 10 días.",
+    rentalContactTitle: "Contacto",
+    rentalCommercialExecutive: "Ejecutivo Comercial - Rental",
+    rentalOperationalAnalyst: "Analista de Gestión Operacional - Rental",
+    rentalCallCenter: "Central de Atención",
+    rentalFinalMessage: "¡La eficiencia de IVECO a disposición de su negocio!",
+    rentalCardTitle: "IVECO Rental",
+    rentalCardSubtitle: "Solución de Alquiler",
+    rentalCardDescription: "Alquiler flexible para sus necesidades de transporte. Flota moderna sin los desafíos de propiedad y mantenimiento.",
+    rentalCardFeature1: "Flexibilidad",
+    rentalCardFeature1Desc: "Adapte su flota a la demanda",
+    rentalCardFeature2: "Mantenimiento Incluido",
+    rentalCardFeature2Desc: "Sin preocupaciones extras",
+    rentalCardFeature3: "Flota Actualizada",
+    rentalCardFeature3Desc: "Vehículos modernos siempre",
   },
   en: {
     searchPlaceholder: "Search in material...",
@@ -1303,6 +1475,62 @@ const translations: Record<Language, Translations> = {
     backToTop: "Back to top",
     navigation: "Navigation",
     summary: "Summary",
+    
+    // Rental
+    rentalTab: "Rental",
+    sidebarRentalIntro: "Introduction",
+    sidebarRentalPackages: "Packages",
+    sidebarRentalTerms: "Terms and Conditions",
+    sidebarRentalContact: "Contact",
+    rentalSubtitle: "The complete rental solution",
+    rentalIntroTitle: "About IVECO Rental",
+    rentalIntroDesc: "In Brazil since 1997, IVECO is a global leader in the commercial vehicles market. Our mission is to offer innovative and sustainable solutions that meet our customers' transportation needs, and IVECO Rental is one of them.",
+    rentalIntroDesc2: "Created to provide more flexibility and excellence for companies of all sizes and segments, IVECO Rental guarantees a modern fleet always in good condition, without the challenges of ownership or maintenance concerns.",
+    rentalAdvantagesTitle: "Advantages of IVECO vehicle rental",
+    rentalAdvantagesList: ["Flexibility", "Cost reduction", "Maintenance included", "Updated fleet", "Tax benefits and sustainability", "Direct focal point with the factory"],
+    rentalPackagesTitle: "IVECO Rental Packages",
+    rentalPackagesDesc: "Choosing IVECO vehicle rental brings numerous advantages to your company:",
+    rentalService: "Service",
+    rentalEssentialPlan: "Essential Plan",
+    rentalPremiumPlan: "Premium Plan",
+    rentalVehicleRental: "Vehicle Rental",
+    rentalPreventiveMaintenance: "Preventive Maintenance",
+    rentalSupport0800: "0800 Support",
+    rentalTraining: "Training and Technical Delivery",
+    rentalFineManagement: "Fine Management",
+    rentalLicenseIPVA: "Registration and IPVA",
+    rentalTelemetry: "Telemetry Services",
+    rentalCorrectiveMaintenance: "Corrective Maintenance",
+    rentalRoadside24h: "24-Hour Roadside Assistance",
+    rentalTermsTitle: "General Terms and Conditions",
+    rentalUsagePolicyTitle: "Usage and Maintenance Policy",
+    rentalUsagePolicyDesc: "Vehicles must be used according to manufacturer specifications and maintenance will be performed by IVECO in NATIONAL territory. The maintenance periods informed in the proposal are considered for highway use.",
+    rentalContractProcedureTitle: "Contracting Procedures",
+    rentalAdhesionProcess: "Adhesion Process",
+    rentalAdhesionProcessDesc: "Simple and agile, with complete support from our team.",
+    rentalDeliveryTime: "Vehicle Delivery Time",
+    rentalDeliveryTimeDesc: "Vehicle delivery follows stock availability.",
+    rentalInsurance: "Insurance and Responsibilities",
+    rentalInsuranceDesc: "At the customer's expense.",
+    rentalTires: "Tires",
+    rentalTiresDesc: "Not included in the proposal.",
+    rentalPickupLocation: "Pickup Location",
+    rentalPickupLocationDesc: "Betim",
+    rentalProposalValidity: "Proposal valid for 10 days.",
+    rentalContactTitle: "Contact",
+    rentalCommercialExecutive: "Commercial Executive - Rental",
+    rentalOperationalAnalyst: "Operational Management Analyst - Rental",
+    rentalCallCenter: "Call Center",
+    rentalFinalMessage: "IVECO's efficiency at your business's disposal!",
+    rentalCardTitle: "IVECO Rental",
+    rentalCardSubtitle: "Rental Solution",
+    rentalCardDescription: "Flexible rental for your transportation needs. Modern fleet without the challenges of ownership and maintenance.",
+    rentalCardFeature1: "Flexibility",
+    rentalCardFeature1Desc: "Adapt your fleet to demand",
+    rentalCardFeature2: "Maintenance Included",
+    rentalCardFeature2Desc: "No extra worries",
+    rentalCardFeature3: "Updated Fleet",
+    rentalCardFeature3Desc: "Always modern vehicles",
   },
 };
 

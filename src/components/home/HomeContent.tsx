@@ -1,13 +1,14 @@
-import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle, Wifi, Link2, Globe, Calculator, GraduationCap } from "lucide-react";
+import { ArrowRight, Cpu, Shield, Truck, Gauge, Settings, FileCheck, MessageCircle, Wifi, Link2, Globe, Calculator, GraduationCap, Car, Wrench, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ivecoSeuHeader from "@/assets/iveco-seu-header.jpg";
 import coberturaPlanosHeader from "@/assets/cobertura-planos-header.webp";
 import telemetriaHeader from "@/assets/telemetria-header.jpg";
+import rentalHeader from "@/assets/rental-header.jpg";
 
 interface HomeContentProps {
-  onNavigate: (tab: "material1" | "material2" | "telemetria") => void;
+  onNavigate: (tab: "material1" | "material2" | "telemetria" | "rental") => void;
 }
 
 export function HomeContent({ onNavigate }: HomeContentProps) {
@@ -49,7 +50,7 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
 
       {/* Solutions Grid */}
       <div className="flex-1 bg-background py-6 sm:py-8 md:py-12 px-3 sm:px-4 md:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           
           {/* IVECO SEU Card */}
           <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -205,6 +206,60 @@ export function HomeContent({ onNavigate }: HomeContentProps) {
 
               <Button 
                 onClick={() => onNavigate("telemetria")}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base"
+              >
+                {t.viewDetails}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Rental Card */}
+          <div className="bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div 
+              className="relative p-4 sm:p-6 border-b border-border h-32 sm:h-36"
+              style={{ backgroundImage: `url(${rentalHeader})`, backgroundPosition: 'center 50%', backgroundSize: 'cover' }}
+            >
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                  <div className="p-2 sm:p-3 bg-primary rounded-lg">
+                    <Car className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                  </div>
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{t.rentalCardTitle}</h2>
+                </div>
+                <p className="text-sm sm:text-base text-white/80">{t.rentalCardSubtitle}</p>
+              </div>
+            </div>
+            
+            <div className="p-4 sm:p-6">
+              <p className="text-sm sm:text-base text-foreground mb-4 sm:mb-6">
+                {t.rentalCardDescription}
+              </p>
+              
+              <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <Truck className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-muted-foreground">
+                    <strong className="text-foreground">{t.rentalCardFeature1}</strong> - {t.rentalCardFeature1Desc}
+                  </span>
+                </div>
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <Wrench className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-muted-foreground">
+                    <strong className="text-foreground">{t.rentalCardFeature2}</strong> - {t.rentalCardFeature2Desc}
+                  </span>
+                </div>
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-muted-foreground">
+                    <strong className="text-foreground">{t.rentalCardFeature3}</strong> - {t.rentalCardFeature3Desc}
+                  </span>
+                </div>
+              </div>
+
+              <Button 
+                onClick={() => onNavigate("rental")}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base"
               >
                 {t.viewDetails}
