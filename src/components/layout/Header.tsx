@@ -1,4 +1,4 @@
-import { Search, Menu, Printer, ArrowUp } from "lucide-react";
+import { Search, Menu, Printer, ArrowUp, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -69,6 +69,17 @@ export function Header({ onSearch, searchQuery, onMenuToggle, activeTab, onLogoC
         </div>
 
         <div className="flex items-center gap-1 sm:gap-2">
+          {/* Home Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onLogoClick}
+            className="text-white hover:bg-white/10 h-8 w-8 sm:h-10 sm:w-10"
+            title={t.home || "Início"}
+          >
+            <Home className="h-4 w-4 sm:h-5 sm:w-5" />
+          </Button>
+
           {/* Language Switcher */}
           <LanguageSwitcher />
 
