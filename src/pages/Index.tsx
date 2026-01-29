@@ -108,7 +108,7 @@ const Index = () => {
         {activeTab === "home" ? (
           <HomeContent onNavigate={setActiveTab} />
         ) : (
-          <div className="flex flex-1 lg:ml-14">
+          <div className="flex flex-1 sm:ml-10 lg:ml-12">
             <Sidebar
               sections={currentSections}
               activeSection={activeSection}
@@ -118,7 +118,7 @@ const Index = () => {
             />
             
             <main className="flex-1 lg:ml-0 min-h-[calc(100vh-8rem)]">
-              <div className="p-4 md:p-8">
+              <div className="p-3 sm:p-4 md:p-6 lg:p-8">
                 {activeTab === "material1" ? (
                   <Material1Content 
                     searchQuery={searchQuery}

@@ -33,8 +33,8 @@ export function Sidebar({ sections, activeSection, onSectionClick, isOpen, onClo
       {/* Sidebar - positioned after ToolsSidebar */}
       <aside
         className={cn(
-          "fixed lg:sticky top-[7.5rem] lg:top-[7.5rem] left-14 lg:left-0 h-[calc(100vh-7.5rem)] w-64 lg:w-72 bg-card border-r border-border transition-transform duration-300 overflow-y-auto no-print shadow-sm",
-          isOpen ? "translate-x-0 z-50 top-0 left-0 h-screen w-72" : "-translate-x-full lg:translate-x-0 z-30"
+          "fixed lg:sticky top-[7.5rem] lg:top-[7.5rem] left-0 sm:left-12 lg:left-0 h-[calc(100vh-7.5rem)] w-[280px] sm:w-64 lg:w-72 bg-card border-r border-border transition-transform duration-300 overflow-y-auto no-print shadow-sm",
+          isOpen ? "translate-x-0 z-50 top-0 left-0 h-screen w-[85vw] max-w-[320px]" : "-translate-x-full lg:translate-x-0 z-30"
         )}
       >
         <div className="p-4">
