@@ -12,7 +12,6 @@ import SSTraining from "./pages/SSTraining";
 import IvecoOn from "./pages/IvecoOn";
 import MissionQualifier from "./pages/MissionQualifier";
 import OneDrive from "./pages/OneDrive";
-import QuemSomos from "./pages/QuemSomos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,7 +32,6 @@ const App = () => (
             <Route path="/iveco-on" element={<IvecoOn />} />
             <Route path="/classificador-missao" element={<MissionQualifier />} />
             <Route path="/onedrive" element={<OneDrive />} />
-            <Route path="/quem-somos" element={<QuemSomos />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
