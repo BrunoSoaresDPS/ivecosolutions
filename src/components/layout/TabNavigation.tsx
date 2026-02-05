@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Wifi, Car, Users } from "lucide-react";
+import { Wifi, Car } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
 
 interface TabNavigationProps {
   activeTab: "home" | "material1" | "material2" | "telemetria" | "rental";
@@ -10,7 +9,6 @@ interface TabNavigationProps {
 
 export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
   const { t } = useLanguage();
-  const navigate = useNavigate();
 
   return (
     <div className="bg-card border-b border-border sticky top-14 sm:top-16 z-40 no-print overflow-x-auto">
@@ -63,17 +61,6 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
         >
           <Car className="h-3 w-3 sm:h-4 sm:w-4" />
           <span>{t.rentalTab}</span>
-        </button>
-        <button
-          onClick={() => navigate("/quem-somos")}
-          className={cn(
-            "flex-1 min-w-[80px] py-2.5 sm:py-3 md:py-4 px-2 sm:px-4 md:px-6 text-[10px] sm:text-xs md:text-sm font-medium transition-all duration-200 border-b-2 flex items-center justify-center gap-1",
-            "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/50"
-          )}
-        >
-          <Users className="h-3 w-3 sm:h-4 sm:w-4" />
-          <span className="hidden sm:inline">Quem Somos</span>
-          <span className="sm:hidden">Equipe</span>
         </button>
       </div>
     </div>
