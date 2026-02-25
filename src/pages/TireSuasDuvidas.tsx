@@ -18,8 +18,8 @@ export default function TireSuasDuvidas() {
   useEffect(() => {
     // Configure chatbot
     window.chtlConfig = {
-      chatbotId: "9612341762",
-      display: "page_inline"
+      chatbotId: "6428888898",
+      display: "fullscreen"
     };
 
     // Load chatbot script
@@ -27,8 +27,8 @@ export default function TireSuasDuvidas() {
     script.async = true;
     script.src = "https://chatling.ai/js/embed.js";
     script.id = "chtl-script";
-    script.setAttribute("data-id", "9612341762");
-    script.setAttribute("data-display", "page_inline");
+    script.setAttribute("data-id", "6428888898");
+    script.setAttribute("data-display", "fullscreen");
     document.body.appendChild(script);
 
     return () => {
