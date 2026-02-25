@@ -43,7 +43,7 @@ export default function TireSuasDuvidas() {
   return (
     <div className="h-screen flex flex-col bg-background overflow-hidden">
       {/* Simple Header */}
-      <header className="flex-shrink-0 bg-black text-white shadow-lg z-50">
+      <header className="flex-shrink-0 bg-black text-white shadow-lg" style={{ zIndex: 99999, position: 'relative' }}>
         <div className="flex items-center justify-between h-14 sm:h-16 px-2 sm:px-4 lg:px-6">
           <div className="flex items-center gap-2 sm:gap-4">
             <Link to="/">
